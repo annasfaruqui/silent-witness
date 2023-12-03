@@ -1,0 +1,15 @@
+.footer {
+  width: 100%;
+
+  background-color: brown;
+  padding: 4rem 8rem;
+
+  display: grid;
+  grid-template-columns: repeat(4, minmax(auto, 1fr));
+  justify-items: center;
+  align-items: center;
+  /* grid-auto-rows: fit-content; */
+  gap: 3rem;
+
+  /* width: clamp(120rem, 75%, 100%); */
+}

@@ -1,0 +1,21 @@
+.pageHeader {
+  background-color: var(--color-brand-600);
+  height: 40vh;
+
+  display: flex;
+  flex-direction: column;
+
+  background-image: linear-gradient(
+      to bottom,
+      rgba(40, 40, 40, 0.8),
+      rgba(40, 40, 40, 0.6)
+    ),
+    url("../assets/images/futureUse/img-hero-1.jpg");
+
+  /* futureUse: 8,16,random-6 */
+  background-position: center;
+  background-size: cover;
+}
+
+.location {
+}

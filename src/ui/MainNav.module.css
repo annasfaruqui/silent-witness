@@ -1,0 +1,29 @@
+.nav {
+  width: 100%;
+  height: 9rem;
+  padding: 1rem 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navList {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 3rem;
+}
+
+.navList li a {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--color-grey-800);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.navList li a:global(.active) {
+  color: var(--color-brand-400);
+  font-weight: 800;
+}
