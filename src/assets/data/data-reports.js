@@ -13,7 +13,8 @@ function fromToday(numDays, withTime = false) {
 export const reports_data = [
   {
     id: 1,
-    created_at: fromToday(-398),
+    created_at: fromToday(-398, true),
+    reportDate: fromToday(-398),
     images: [imageUrl + "sample-img-3.jpg", imageUrl + "sample-img-4.jpg"],
     incidentDetails:
       "A concerned citizen reported witnessing suspicious drug-related activity near the local park. Two individuals were observed acting suspiciously near the park entrance. Those men were trying to sell me some green ball-shaped stuff, the size of a playing dice, and that thing resembled some kind of drug. This happened in a local lassi shop near XYZ Monument. they were trying to sell that stuff to me for 150 rupees, but I found it very suspicious and I just left the place without buying anything.",
@@ -31,7 +32,8 @@ export const reports_data = [
   },
   {
     id: 2,
-    created_at: fromToday(-350),
+    created_at: fromToday(-350, true),
+    reportDate: fromToday(-350),
     images: [imageUrl + "sample-img-1.jpg", imageUrl + "sample-img-2.jpg"],
     incidentDetails:
       "Possible drug sale observed in the alley. Three men were involved in a suspicious transaction.\nTwo of the men were behaving suspiciously near the park entrance. Both individuals appear to be in their 30s, one wearing a black hoodie and the other in a blue jacket, and they were wearing bike helmets, so their faces were not clearly visible. And the third man was a little bit older, like in his 40s, wearing yellow t-shirt anda clinical mask to hide his face.\nThe two helmet wearing men were using a Yamaha Fazer bike, and the other man was on foot(he was not using any vehicles).",
@@ -49,7 +51,8 @@ export const reports_data = [
   },
   {
     id: 3,
-    created_at: fromToday(0),
+    created_at: fromToday(0, true),
+    reportDate: fromToday(0),
     incidentDetails:
       "Abandoned property suspected for drug storage. No visible persons at the location.",
     incidentDate: fromToday(-186),
@@ -64,7 +67,8 @@ export const reports_data = [
   },
   {
     id: 4,
-    created_at: fromToday(0),
+    created_at: fromToday(0, true),
+    reportDate: fromToday(0),
     incidentDetails:
       "Possible drug lab discovered in an industrial area. Individual seen carrying suspicious chemicals.",
     incidentDate: fromToday(-50),
@@ -79,7 +83,8 @@ export const reports_data = [
   },
   {
     id: 5,
-    created_at: fromToday(0),
+    created_at: fromToday(0, true),
+    reportDate: fromToday(0),
     incidentDetails:
       "Large gathering suspected for drug distribution. Group seen exchanging unidentified packages.",
     incidentDate: fromToday(-311),
@@ -95,7 +100,8 @@ export const reports_data = [
   },
   {
     id: 6,
-    created_at: fromToday(0),
+    created_at: fromToday(0, true),
+    reportDate: fromToday(0),
     incidentDetails:
       "Suspicious individual loitering near school premises. Individual acting suspiciously near the school entrance.",
     incidentDate: fromToday(-5),
@@ -111,7 +117,8 @@ export const reports_data = [
   },
   {
     id: 7,
-    created_at: fromToday(-45),
+    created_at: fromToday(-45, true),
+    reportDate: fromToday(-45),
     incidentDetails:
       "Unusual activity in a known drug hotspot. Group gathering in an area with a history of drug-related incidents.",
     incidentDate: fromToday(-48),
@@ -126,7 +133,8 @@ export const reports_data = [
   },
   {
     id: 8,
-    created_at: fromToday(-80),
+    created_at: fromToday(-80, true),
+    reportDate: fromToday(-80),
     incidentDetails:
       "Underground meeting suspected in a warehouse. Group seen entering a warehouse during odd hours.",
     incidentDate: fromToday(-95),
@@ -142,7 +150,8 @@ export const reports_data = [
   },
   {
     id: 9,
-    created_at: fromToday(-20),
+    created_at: fromToday(-20, true),
+    reportDate: fromToday(-20),
     incidentDetails:
       "Teenagers suspected of drug use in a local park. Group of teenagers behaving erratically.",
     incidentDate: fromToday(-22),
@@ -158,7 +167,8 @@ export const reports_data = [
   },
   {
     id: 10,
-    created_at: fromToday(-15),
+    created_at: fromToday(-15, true),
+    reportDate: fromToday(-15),
     incidentDetails:
       "Unattended backpack suspected in a public transport station. Suspicious backpack left unattended.",
     incidentDate: fromToday(-20),
@@ -173,7 +183,8 @@ export const reports_data = [
   },
   {
     id: 11,
-    created_at: fromToday(-289),
+    created_at: fromToday(-289, true),
+    reportDate: fromToday(-289),
     incidentDetails:
       "Suspicious individuals seen in an abandoned building. Group engaged in suspicious activities.",
     incidentDate: fromToday(-296),
@@ -189,7 +200,8 @@ export const reports_data = [
   },
   {
     id: 12,
-    created_at: fromToday(-70),
+    created_at: fromToday(-70, true),
+    reportDate: fromToday(-70),
     incidentDetails:
       "Unusual behavior in a local store. Individual acting nervously near the counter.",
     incidentDate: fromToday(-73),
@@ -205,7 +217,8 @@ export const reports_data = [
   },
   {
     id: 13,
-    created_at: fromToday(-140),
+    created_at: fromToday(-140, true),
+    reportDate: fromToday(-140),
     incidentDetails:
       "Late-night gathering in a park. Group seen gathering in the park during late hours.",
     incidentDate: fromToday(-142),
@@ -221,7 +234,8 @@ export const reports_data = [
   },
   {
     id: 14,
-    created_at: fromToday(-30),
+    created_at: fromToday(-30, true),
+    reportDate: fromToday(-30),
     incidentDetails:
       "Suspicious transaction in an alley. Individuals seen exchanging items in a narrow alley.",
     incidentDate: fromToday(-35),
@@ -237,7 +251,8 @@ export const reports_data = [
   },
   {
     id: 15,
-    created_at: fromToday(-1),
+    created_at: fromToday(-1, true),
+    reportDate: fromToday(-1),
     incidentDetails:
       "Large gathering near an abandoned warehouse. Group seen near an abandoned warehouse engaged in unknown activities.",
     incidentDate: fromToday(-7),
@@ -253,7 +268,8 @@ export const reports_data = [
   },
   {
     id: 16,
-    created_at: fromToday(-10),
+    created_at: fromToday(-10, true),
+    reportDate: fromToday(-10),
     incidentDetails:
       "Suspicious vehicle parked for an extended period. Unattended vehicle raising suspicions.",
     incidentDate: fromToday(-12),
@@ -269,7 +285,8 @@ export const reports_data = [
   },
   {
     id: 17,
-    created_at: fromToday(-6),
+    created_at: fromToday(-6, true),
+    reportDate: fromToday(-6),
     incidentDetails:
       "Individuals loitering near a school bus stop. Group seen loitering near a school bus stop.",
     incidentDate: fromToday(-20),
@@ -285,7 +302,8 @@ export const reports_data = [
   },
   {
     id: 18,
-    created_at: fromToday(-200),
+    created_at: fromToday(-200, true),
+    reportDate: fromToday(-200),
     incidentDetails:
       "Individual acting suspiciously in a library. Suspicious behavior observed near the library entrance.",
     incidentDate: fromToday(-220),
@@ -301,7 +319,8 @@ export const reports_data = [
   },
   {
     id: 19,
-    created_at: fromToday(-15),
+    created_at: fromToday(-15, true),
+    reportDate: fromToday(-15),
     incidentDetails:
       "Noise and disturbance in an apartment. Loud sounds and disturbance reported in a residential building.",
     incidentDate: fromToday(-27),
@@ -316,7 +335,8 @@ export const reports_data = [
   },
   {
     id: 20,
-    created_at: fromToday(-183),
+    created_at: fromToday(-183, true),
+    reportDate: fromToday(-183),
     incidentDetails:
       "Unusual gathering in a parking garage. Group seen gathering in a parking garage during odd hours.",
     incidentDate: fromToday(-193),
@@ -332,7 +352,8 @@ export const reports_data = [
   },
   {
     id: 21,
-    created_at: fromToday(-2),
+    created_at: fromToday(-2, true),
+    reportDate: fromToday(-2),
     incidentDetails:
       "Suspicious package found near a public event. Unattended package raises concerns.",
     incidentDate: fromToday(-3),
@@ -347,7 +368,8 @@ export const reports_data = [
   },
   {
     id: 22,
-    created_at: fromToday(-100),
+    created_at: fromToday(-100, true),
+    reportDate: fromToday(-100),
     incidentDetails:
       "Individuals conducting unusual rituals in a park. Group seen engaging in mysterious activities.",
     incidentDate: fromToday(-103),
@@ -363,7 +385,8 @@ export const reports_data = [
   },
   {
     id: 23,
-    created_at: fromToday(-2),
+    created_at: fromToday(-2, true),
+    reportDate: fromToday(-2),
     incidentDetails:
       "Abandoned building suspected for drug storage. Unusual activities reported in an abandoned structure.",
     incidentDate: fromToday(-9),
@@ -378,7 +401,8 @@ export const reports_data = [
   },
   {
     id: 24,
-    created_at: fromToday(0),
+    created_at: fromToday(0, true),
+    reportDate: fromToday(0),
     incidentDetails:
       "Unauthorized access to a restricted area. Individuals seen entering a restricted zone without permission.",
     incidentDate: fromToday(-20),
@@ -394,7 +418,8 @@ export const reports_data = [
   },
   {
     id: 25,
-    created_at: fromToday(-1),
+    created_at: fromToday(-1, true),
+    reportDate: fromToday(-1),
     incidentDetails:
       "Suspicious behavior near a school. Individual seen loitering near a school premises during school hours.",
     incidentDate: fromToday(-16),
@@ -411,7 +436,8 @@ export const reports_data = [
 
   {
     id: 26,
-    created_at: fromToday(-10000),
+    created_at: fromToday(-10000, true),
+    reportDate: fromToday(-10000),
     incidentDetails:
       "Suspicious behavior near a school. Individual seen loitering near a school premises during school hours.",
     incidentDate: fromToday(-16),
@@ -427,7 +453,8 @@ export const reports_data = [
   },
   {
     id: 27,
-    created_at: fromToday(-99909),
+    created_at: fromToday(-99909, true),
+    reportDate: fromToday(-99909),
     incidentDetails:
       "Suspicious behavior near a school. Individual seen loitering near a school premises during school hours.",
     incidentDate: fromToday(-16),
@@ -444,7 +471,8 @@ export const reports_data = [
 
   {
     id: 28,
-    created_at: fromToday(-5000),
+    created_at: fromToday(-5000, true),
+    reportDate: fromToday(-5000),
     incidentDetails:
       "Suspicious behavior near a school. Individual seen loitering near a school premises during school hours.",
     incidentDate: fromToday(-16),
@@ -461,7 +489,8 @@ export const reports_data = [
 
   {
     id: 29,
-    created_at: fromToday(-2000),
+    created_at: fromToday(-2000, true),
+    reportDate: fromToday(-2000),
     incidentDetails:
       "Suspicious behavior near a school. Individual seen loitering near a school premises during school hours.",
     incidentDate: fromToday(-16),
@@ -478,7 +507,8 @@ export const reports_data = [
 
   {
     id: 30,
-    created_at: fromToday(-900),
+    created_at: fromToday(-900, true),
+    reportDate: fromToday(-900),
     incidentDetails:
       "Suspicious behavior near a school. Individual seen loitering near a school premises during school hours.",
     incidentDate: fromToday(-16),

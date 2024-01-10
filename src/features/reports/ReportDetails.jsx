@@ -201,7 +201,7 @@ function ImgBox({ src }) {
 
 function ReportDetails({ report }) {
   const {
-    created_at: reportDate,
+    reportDate,
     status,
     incidentDetails,
     incidentDate,

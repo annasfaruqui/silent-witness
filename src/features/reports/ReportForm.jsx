@@ -10,6 +10,7 @@ import Textarea from "../../ui/TextArea";
 import FileInput from "../../ui/FileInput";
 
 import { useCreateReport } from "./useCreateReport";
+import { getToday } from "../../utils/helpers";
 
 function ReportForm() {
   const { isCreating, createReport } = useCreateReport();
@@ -33,6 +34,7 @@ function ReportForm() {
     const images = initialImagesArray.filter((el) => el !== undefined);
 
     const cleanedData = {
+      reportDate: getToday(),
       incidentDetails: data.incidentDetails,
       incidentDate: data.incidentDate,
       addressDetails: data.addressDetails,
@@ -293,10 +295,10 @@ function ReportForm() {
       {/* Action Buttons */}
       <FormRowVertical>
         <FormRow>
-          <Button variation="secondary" type="reset">
+          <Button disabled={isCreating} variation="secondary" type="reset">
             Cancel
           </Button>
-          <Button>Submit Report</Button>
+          <Button disabled={isCreating}>Submit Report</Button>
         </FormRow>
       </FormRowVertical>
     </Form>

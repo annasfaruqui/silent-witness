@@ -44,7 +44,7 @@ const IncidentDetails = styled.p`
 function ReportRow({ report }) {
   const {
     id: reportId,
-    created_at: reportDate,
+    reportDate,
     incidentDetails,
     incidentDate,
     status,

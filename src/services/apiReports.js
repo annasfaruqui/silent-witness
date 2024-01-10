@@ -22,7 +22,7 @@ export async function getReports({ filter, sortBy, page }) {
 
   // SORT
   if (sortBy.field === "reportNumber") sortBy.field = "id";
-  if (sortBy.field === "reportDate") sortBy.field = "created_at";
+  // if (sortBy.field === "reportDate") sortBy.field = "created_at";
 
   if (sortBy)
     query = query.order(sortBy.field, {
@@ -139,11 +139,12 @@ export async function getTodayReports() {
   const { data, error } = await supabase
     .from("reports")
     .select("*")
-    .eq("created_at", `${getToday()}`);
+    .eq("reportDate", `${getToday()}`)
+    .order("created_at");
 
   if (error) {
     console.error(error);
-    throw new Error("Bookings could not get loaded");
+    throw new Error("Reports could not get loaded");
   }
   return data;
 }
@@ -163,7 +164,7 @@ export async function getReportsAfterDate(date) {
 
   if (error) {
     console.error(error);
-    throw new Error("Bookings could not get loaded");
+    throw new Error("Reports could not get loaded");
   }
 
   return data;
