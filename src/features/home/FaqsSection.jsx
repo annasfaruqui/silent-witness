@@ -49,6 +49,36 @@ const Question = styled.div`
       fill: var(--color-brand-600);
     }
   }
+
+  @media (max-width: 75em) {
+    & h5 {
+      font-size: 2.4rem;
+    }
+  }
+
+  @media (max-width: 56em) {
+    gap: 1.8rem;
+
+    & h5 {
+      font-size: 2rem;
+    }
+  }
+
+  @media (max-width: 32em) {
+    gap: 0.5rem;
+
+    & h5 {
+      font-size: var(--font-lg);
+      font-weight: 500;
+    }
+
+    & span {
+      & svg {
+        width: 1.8rem;
+        height: 1.8rem;
+      }
+    }
+  }
 `;
 
 const Answer = styled.div`
@@ -60,6 +90,28 @@ const Answer = styled.div`
     font-weight: 500;
     color: var(--color-grey-500);
     line-height: 1.5;
+  }
+
+  @media (max-width: 75em) {
+    & p {
+      font-size: var(--font-md);
+    }
+  }
+
+  @media (max-width: 56em) {
+    padding-top: 2rem;
+
+    & p {
+      color: var(--color-grey-600);
+    }
+  }
+
+  @media (max-width: 32em) {
+    padding-top: 1rem;
+
+    & p {
+      font-size: var(--font-sm);
+    }
   }
 `;
 

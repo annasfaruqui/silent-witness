@@ -29,6 +29,14 @@ const Grid2 = styled.div`
   display: grid;
   grid-template-columns: 70% 1fr;
   gap: 3rem;
+
+  @media (max-width: 75em) {
+    grid-template-columns: 60% 1fr;
+  }
+
+  @media (max-width: 56em) {
+    grid-template-columns: 50% 1fr;
+  }
 `;
 
 const List = styled.ul`

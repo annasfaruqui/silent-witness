@@ -12,7 +12,6 @@ function fromToday(numDays, withTime = false) {
 
 export const reports_data = [
   {
-    id: 1,
     created_at: fromToday(-398, true),
     reportDate: fromToday(-398),
     images: [imageUrl + "sample-img-3.jpg", imageUrl + "sample-img-4.jpg"],
@@ -31,7 +30,6 @@ export const reports_data = [
     status: "solved",
   },
   {
-    id: 2,
     created_at: fromToday(-350, true),
     reportDate: fromToday(-350),
     images: [imageUrl + "sample-img-1.jpg", imageUrl + "sample-img-2.jpg"],
@@ -50,7 +48,6 @@ export const reports_data = [
     status: "solved",
   },
   {
-    id: 3,
     created_at: fromToday(0, true),
     reportDate: fromToday(0),
     incidentDetails:
@@ -66,7 +63,6 @@ export const reports_data = [
     status: "unsolved",
   },
   {
-    id: 4,
     created_at: fromToday(0, true),
     reportDate: fromToday(0),
     incidentDetails:
@@ -82,7 +78,6 @@ export const reports_data = [
     status: "probing",
   },
   {
-    id: 5,
     created_at: fromToday(0, true),
     reportDate: fromToday(0),
     incidentDetails:
@@ -99,7 +94,6 @@ export const reports_data = [
     status: "solved",
   },
   {
-    id: 6,
     created_at: fromToday(0, true),
     reportDate: fromToday(0),
     incidentDetails:
@@ -116,7 +110,6 @@ export const reports_data = [
     status: "unsolved",
   },
   {
-    id: 7,
     created_at: fromToday(-45, true),
     reportDate: fromToday(-45),
     incidentDetails:
@@ -132,7 +125,6 @@ export const reports_data = [
     status: "probing",
   },
   {
-    id: 8,
     created_at: fromToday(-80, true),
     reportDate: fromToday(-80),
     incidentDetails:
@@ -149,7 +141,6 @@ export const reports_data = [
     status: "false",
   },
   {
-    id: 9,
     created_at: fromToday(-20, true),
     reportDate: fromToday(-20),
     incidentDetails:
@@ -166,7 +157,6 @@ export const reports_data = [
     status: "false",
   },
   {
-    id: 10,
     created_at: fromToday(-15, true),
     reportDate: fromToday(-15),
     incidentDetails:
@@ -182,7 +172,6 @@ export const reports_data = [
     status: "unsolved",
   },
   {
-    id: 11,
     created_at: fromToday(-289, true),
     reportDate: fromToday(-289),
     incidentDetails:
@@ -199,7 +188,6 @@ export const reports_data = [
     status: "false",
   },
   {
-    id: 12,
     created_at: fromToday(-70, true),
     reportDate: fromToday(-70),
     incidentDetails:
@@ -216,7 +204,6 @@ export const reports_data = [
     status: "solved",
   },
   {
-    id: 13,
     created_at: fromToday(-140, true),
     reportDate: fromToday(-140),
     incidentDetails:
@@ -233,7 +220,6 @@ export const reports_data = [
     status: "probing",
   },
   {
-    id: 14,
     created_at: fromToday(-30, true),
     reportDate: fromToday(-30),
     incidentDetails:
@@ -250,7 +236,6 @@ export const reports_data = [
     status: "solved",
   },
   {
-    id: 15,
     created_at: fromToday(-1, true),
     reportDate: fromToday(-1),
     incidentDetails:
@@ -267,7 +252,6 @@ export const reports_data = [
     status: "false",
   },
   {
-    id: 16,
     created_at: fromToday(-10, true),
     reportDate: fromToday(-10),
     incidentDetails:
@@ -284,7 +268,6 @@ export const reports_data = [
     status: "unsolved",
   },
   {
-    id: 17,
     created_at: fromToday(-6, true),
     reportDate: fromToday(-6),
     incidentDetails:
@@ -301,7 +284,6 @@ export const reports_data = [
     status: "unsolved",
   },
   {
-    id: 18,
     created_at: fromToday(-200, true),
     reportDate: fromToday(-200),
     incidentDetails:
@@ -318,7 +300,6 @@ export const reports_data = [
     status: "solved",
   },
   {
-    id: 19,
     created_at: fromToday(-15, true),
     reportDate: fromToday(-15),
     incidentDetails:
@@ -334,7 +315,6 @@ export const reports_data = [
     status: "false",
   },
   {
-    id: 20,
     created_at: fromToday(-183, true),
     reportDate: fromToday(-183),
     incidentDetails:
@@ -351,7 +331,6 @@ export const reports_data = [
     status: "solved",
   },
   {
-    id: 21,
     created_at: fromToday(-2, true),
     reportDate: fromToday(-2),
     incidentDetails:
@@ -367,7 +346,6 @@ export const reports_data = [
     status: "probing",
   },
   {
-    id: 22,
     created_at: fromToday(-100, true),
     reportDate: fromToday(-100),
     incidentDetails:
@@ -384,7 +362,6 @@ export const reports_data = [
     status: "solved",
   },
   {
-    id: 23,
     created_at: fromToday(-2, true),
     reportDate: fromToday(-2),
     incidentDetails:
@@ -400,7 +377,6 @@ export const reports_data = [
     status: "unsolved",
   },
   {
-    id: 24,
     created_at: fromToday(0, true),
     reportDate: fromToday(0),
     incidentDetails:
@@ -417,7 +393,6 @@ export const reports_data = [
     status: "solved",
   },
   {
-    id: 25,
     created_at: fromToday(-1, true),
     reportDate: fromToday(-1),
     incidentDetails:
@@ -435,7 +410,6 @@ export const reports_data = [
   },
 
   {
-    id: 26,
     created_at: fromToday(-10000, true),
     reportDate: fromToday(-10000),
     incidentDetails:
@@ -452,7 +426,6 @@ export const reports_data = [
     status: "unsolved",
   },
   {
-    id: 27,
     created_at: fromToday(-99909, true),
     reportDate: fromToday(-99909),
     incidentDetails:
@@ -470,7 +443,6 @@ export const reports_data = [
   },
 
   {
-    id: 28,
     created_at: fromToday(-5000, true),
     reportDate: fromToday(-5000),
     incidentDetails:
@@ -488,7 +460,6 @@ export const reports_data = [
   },
 
   {
-    id: 29,
     created_at: fromToday(-2000, true),
     reportDate: fromToday(-2000),
     incidentDetails:
@@ -506,7 +477,6 @@ export const reports_data = [
   },
 
   {
-    id: 30,
     created_at: fromToday(-900, true),
     reportDate: fromToday(-900),
     incidentDetails:

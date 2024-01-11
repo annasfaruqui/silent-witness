@@ -101,6 +101,18 @@ html {
   font-size: 62.5%;
 }
 
+@media (max-width: 56em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media (max-width: 32em) {
+  html {
+    font-size: 50%;
+  }
+}
+
 body {
   font-family: "Rubik", sans-serif;
   color: var(--color-grey-700);

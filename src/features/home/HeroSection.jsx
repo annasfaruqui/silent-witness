@@ -31,6 +31,12 @@ const Box = styled.div`
   align-items: center;
   justify-content: center;
   gap: 4rem;
+
+  @media (max-width: 75em) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const TextBox = styled.div`
@@ -41,6 +47,17 @@ const TextBox = styled.div`
 
   @media (max-width: 94em) {
     gap: 2rem;
+  }
+
+  @media (max-width: 75em) {
+    width: 85%;
+    padding-top: 3rem;
+    text-align: center;
+    align-items: center;
+  }
+
+  @media (max-width: 56em) {
+    width: 100%;
   }
 
   & h1 {
@@ -54,6 +71,16 @@ const TextBox = styled.div`
       font-weight: 800;
       margin-bottom: 0;
     }
+
+    @media (max-width: 75em) {
+      font-size: 7rem;
+      margin-bottom: 2rem;
+    }
+
+    @media (max-width: 56em) {
+      font-size: 5.8rem;
+      margin-bottom: 2rem;
+    }
   }
 
   & h2 {
@@ -63,6 +90,18 @@ const TextBox = styled.div`
 
     @media (max-width: 94em) {
       font-size: 2rem;
+    }
+
+    @media (max-width: 75em) {
+      font-size: 2.2rem;
+    }
+
+    @media (max-width: 56em) {
+      font-size: 2rem;
+    }
+
+    @media (max-width: 32em) {
+      font-size: var(--font-lg);
     }
   }
 `;
@@ -80,6 +119,15 @@ const ButtonBox = styled.div`
 
 const ImgBox = styled.div`
   width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 75em) {
+    margin: 0 auto;
+    margin-top: 4rem;
+  }
 `;
 
 const StyledButtonWithArrowLink = styled(Link)`

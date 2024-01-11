@@ -1,13 +1,14 @@
-import { useEffect, useRef } from "react";
-import { Link } from "react-scroll";
+import { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router";
 import styled, { css } from "styled-components";
+import { Link } from "react-scroll";
+import { HiMenu, HiX } from "react-icons/hi";
 
 import Logo from "./Logo";
 import ButtonLink from "./ButtonLink";
 
 import { useHomeScroll } from "../contexts/HomeScrollContext";
 import { homeNavlinks_data as homeNavbarLinks } from "../assets/data/data-navlinks";
-import { useNavigate } from "react-router";
 
 const Header = styled.header`
   display: flex;
@@ -49,12 +50,42 @@ const NavBar = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: 81rem) {
+    padding: 1.2rem 2rem;
+  }
 `;
 
 const LogoBox = styled.div`
   width: 25rem;
   height: 100%;
   cursor: pointer;
+`;
+
+const MobileNavButton = styled.button`
+  background: none;
+  border: none;
+  border-radius: 50%;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  display: none;
+
+  &:focus {
+    outline: none;
+  }
+
+  & svg {
+    height: 4.5rem;
+    width: 4.5rem;
+    fill: var(--color-brand-700);
+  }
+
+  @media (max-width: 81rem) {
+    display: block;
+  }
 `;
 
 const NavList = styled.ul`
@@ -64,6 +95,10 @@ const NavList = styled.ul`
   display: flex;
   align-items: center;
   gap: 1rem;
+
+  @media (max-width: 81rem) {
+    display: none;
+  }
 `;
 
 const StyledLink = styled(Link)`
@@ -100,6 +135,7 @@ function NavLink({ linkTo, name }) {
 function HomeNav() {
   const navRef = useRef();
   const navigate = useNavigate();
+  const [isOpen, setIsOpen] = useState(false);
   const { isScrolled, setIsScrolled } = useHomeScroll();
 
   useEffect(
@@ -128,12 +164,20 @@ function HomeNav() {
     [setIsScrolled]
   );
 
+  function handleMobileNav() {
+    setIsOpen((open) => !open);
+  }
+
   return (
     <Header ref={navRef} $scrolled={isScrolled ? "true" : "false"}>
       <NavBar>
         <LogoBox onClick={() => navigate("/home", { replace: true })}>
           <Logo />
         </LogoBox>
+
+        <MobileNavButton onClick={handleMobileNav}>
+          {isOpen ? <HiMenu /> : <HiX />}
+        </MobileNavButton>
 
         <NavList>
           {homeNavbarLinks.map((link) => (

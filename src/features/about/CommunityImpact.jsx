@@ -26,7 +26,7 @@ const JoinUs = styled.div`
     font-weight: 800;
     color: var(--color-brand-600);
     text-transform: uppercase;
-
+    text-align: center;
     word-spacing: 1.6rem;
   }
 
@@ -37,6 +37,28 @@ const JoinUs = styled.div`
     line-height: 1.5;
     hyphens: none;
     margin-bottom: 2rem;
+  }
+
+  @media (max-width: 75em) {
+    & h5 {
+      font-size: 4rem;
+      word-spacing: 1.4rem;
+    }
+  }
+
+  @media (max-width: 32em) {
+    align-items: flex-start;
+
+    & h5 {
+      font-size: 3rem;
+      font-weight: 700;
+      text-align: left;
+      word-spacing: 1rem;
+    }
+
+    & p {
+      text-align: justify;
+    }
   }
 `;
 
