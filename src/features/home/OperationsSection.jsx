@@ -130,33 +130,35 @@ function Step({ step }) {
       </StyledStep>
     );
 
-  if (imgPosition === "right" && window.innerWidth > 896)
-    return (
-      <StyledStep>
-        <StepDetails>
-          <StepNumber>{step.stepNumber}</StepNumber>
-          <h5>{step.name}</h5>
-          <StepDescription>{step.description}</StepDescription>
-        </StepDetails>
-        <ImgBox>
-          <img src={step.image} alt={step.name} />
-        </ImgBox>
-      </StyledStep>
-    );
+  if (window.innerWidth > 896) {
+    if (imgPosition === "right")
+      return (
+        <StyledStep>
+          <StepDetails>
+            <StepNumber>{step.stepNumber}</StepNumber>
+            <h5>{step.name}</h5>
+            <StepDescription>{step.description}</StepDescription>
+          </StepDetails>
+          <ImgBox>
+            <img src={step.image} alt={step.name} />
+          </ImgBox>
+        </StyledStep>
+      );
 
-  if (imgPosition === "left" && window.innerWidth > 896)
-    return (
-      <StyledStep>
-        <ImgBox>
-          <img src={step.image} alt={step.name} />
-        </ImgBox>
-        <StepDetails>
-          <StepNumber>{step.stepNumber}</StepNumber>
-          <h5>{step.name}</h5>
-          <StepDescription>{step.description}</StepDescription>
-        </StepDetails>
-      </StyledStep>
-    );
+    if (imgPosition === "left")
+      return (
+        <StyledStep>
+          <ImgBox>
+            <img src={step.image} alt={step.name} />
+          </ImgBox>
+          <StepDetails>
+            <StepNumber>{step.stepNumber}</StepNumber>
+            <h5>{step.name}</h5>
+            <StepDescription>{step.description}</StepDescription>
+          </StepDetails>
+        </StyledStep>
+      );
+  }
 }
 
 function OperationsSection() {

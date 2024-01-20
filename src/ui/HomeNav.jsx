@@ -83,7 +83,7 @@ const MobileNavButton = styled.button`
     fill: var(--color-brand-700);
   }
 
-  @media (max-width: 81rem) {
+  @media (max-width: 75rem) {
     display: block;
   }
 `;
@@ -96,7 +96,7 @@ const NavList = styled.ul`
   align-items: center;
   gap: 1rem;
 
-  @media (max-width: 81rem) {
+  @media (max-width: 75rem) {
     display: none;
   }
 `;
@@ -176,8 +176,31 @@ function HomeNav() {
         </LogoBox>
 
         <MobileNavButton onClick={handleMobileNav}>
-          {isOpen ? <HiMenu /> : <HiX />}
+          {isOpen ? <HiX /> : <HiMenu />}
         </MobileNavButton>
+
+        {/* {isOpen ? (
+          <NavList>
+            {homeNavbarLinks.map((link) => (
+              <NavLink linkTo={link.linkTo} name={link.name} key={link.id} />
+            ))}
+            <li>
+              <ButtonLink to="/login" size="large" variation="primary">
+                Authorized Login
+              </ButtonLink>
+            </li>
+          </NavList>
+        ) : (
+          <div
+            style={{
+              height: "9rem",
+              width: "9rem",
+              backgroundColor: "yellowgreen",
+            }}
+          >
+            abcd
+          </div>
+        )} */}
 
         <NavList>
           {homeNavbarLinks.map((link) => (

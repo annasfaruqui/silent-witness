@@ -209,7 +209,10 @@ function ReportForm() {
       </FormRowVertical>
 
       {/* Image */}
-      <FormRowVertical>
+      <FormRowVertical
+        type="report"
+        label="Include supporting images. Attach any relevant photos or visuals to strengthen your report and aid in the investigation"
+      >
         <FormRow label="Incident image 1">
           <FileInput
             id="image1"

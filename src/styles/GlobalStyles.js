@@ -34,6 +34,12 @@ const GlobalStyles = createGlobalStyle`
   --color-silver-100: #e5e7eb;
   --color-silver-200: #374151;
 
+  --color-blue-100: #c2ddff;
+  --color-blue-200: #2789f3;
+
+  --color-purple-100: #e0e7ff;
+  --color-purple-200: #4338ca;
+
   --color-green-100: #dcfce7;
   --color-green-200: #15803d;
   --color-green-300: #0c5d2b;
@@ -42,8 +48,7 @@ const GlobalStyles = createGlobalStyle`
   --color-yellow-200: #a16207;
   --color-yellow-300: #814e06;
 
-  --color-blue-100: #c2ddff;
-  --color-blue-200: #2789f3;
+  
 
   --backdrop-color: rgba(255, 255, 255, 0.1);
 

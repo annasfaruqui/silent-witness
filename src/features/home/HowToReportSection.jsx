@@ -21,8 +21,8 @@ const StyledStep = styled.div`
   display: grid;
   grid-template-rows: 20rem repeat(2, min-content);
 
-  background-color: var(--color-grey-100);
-  border: 1px solid var(--color-brand-400);
+  background-color: var(--color-grey-0);
+  border: 1px solid var(--color-brand-200);
   border-radius: var(--border-radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-sm);
@@ -62,7 +62,8 @@ const StyledStep = styled.div`
 
     & p {
       font-size: var(--font-lg);
-      color: var(--color-grey-800);
+      color: var(--color-grey-700);
+      hyphens: none;
       line-height: 1.5;
 
       padding: 2rem;

@@ -6,6 +6,10 @@ const StyledFormRow = styled.div`
   gap: 0.8rem;
   padding: 1.2rem 0;
 
+  @media (max-width: 32em) {
+    /* padding: 5rem 0; */
+  }
+
   ${(props) =>
     props.type === "report" &&
     css`
@@ -13,6 +17,11 @@ const StyledFormRow = styled.div`
         padding-top: 3rem;
         padding-bottom: 8rem;
         border-bottom: 1px solid var(--color-grey-300);
+
+        @media (max-width: 32em) {
+          padding-top: 3rem;
+          padding-bottom: 2rem;
+        }
       }
     `}
 `;
@@ -26,6 +35,10 @@ const Label = styled.label`
     css`
       font-size: var(--font-xl);
       margin-bottom: 1rem;
+
+      @media (max-width: 32em) {
+        font-size: var(--font-lg);
+      }
     `}
 `;
 
@@ -38,7 +51,7 @@ function FormRowVertical({ label, error, children, type }) {
   return (
     <StyledFormRow type={type}>
       {label && (
-        <Label type={type} htmlFor={children.props.id}>
+        <Label type={type} htmlFor={children?.props?.id}>
           {label}
         </Label>
       )}

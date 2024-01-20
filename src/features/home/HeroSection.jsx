@@ -32,6 +32,11 @@ const Box = styled.div`
   justify-content: center;
   gap: 4rem;
 
+  @media (max-width: 81em) {
+    /* max-width: 140rem; */
+    padding: 0 10rem;
+  }
+
   @media (max-width: 75em) {
     display: flex;
     flex-direction: column;
@@ -136,7 +141,10 @@ const StyledButtonWithArrowLink = styled(Link)`
   font-weight: 500;
   color: var(--color-grey-600);
   background: var(--color-grey-0);
+  border: none;
   border: 1px solid var(--color-grey-200);
+  border-radius: var(--border-radius-sm);
+  box-shadow: var(--shadow-sm);
 
   display: flex;
   align-items: center;

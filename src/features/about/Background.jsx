@@ -35,7 +35,8 @@ const Grid2 = styled.div`
   }
 
   @media (max-width: 56em) {
-    grid-template-columns: 50% 1fr;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(1fr, 1fr);
   }
 `;
 

@@ -13,6 +13,10 @@ const Form = styled.form`
 
       display: flex;
       flex-direction: column;
+
+      @media (max-width: 32em) {
+        padding: 2.4rem 2rem;
+      }
     `}
 
   ${(props) =>
