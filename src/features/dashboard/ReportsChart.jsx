@@ -16,7 +16,7 @@ const StyledReportsChart = styled.div`
 
   padding: 2.4rem 3.2rem;
 
-  grid-column: 7 / span 4;
+  grid-column: 8 / -1;
 `;
 
 const startDataReports = [
@@ -34,6 +34,11 @@ const startDataReports = [
     status: "Probing cases",
     value: 0,
     color: "#dddd00",
+  },
+  {
+    status: "Unrelated cases",
+    value: 0,
+    color: "#4338ca",
   },
   {
     status: "False cases",
@@ -57,6 +62,7 @@ function prepareData(startData, reports) {
       if (stat === "solved") return incArrayValue(arr, "Solved cases");
       if (stat === "unsolved") return incArrayValue(arr, "Unsolved cases");
       if (stat === "probing") return incArrayValue(arr, "Probing cases");
+      if (stat === "unrelated") return incArrayValue(arr, "Unrelated cases");
       if (stat === "false") return incArrayValue(arr, "False cases");
       return arr;
     }, startData)

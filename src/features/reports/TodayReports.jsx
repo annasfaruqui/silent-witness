@@ -17,7 +17,7 @@ const StyledTodayReports = styled.div`
   display: flex;
   flex-direction: column;
   gap: 2.4rem;
-  grid-column: 1 / span 6;
+  grid-column: 1 / span 7;
   padding-top: 2.4rem;
 `;
 

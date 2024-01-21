@@ -1,3 +1,5 @@
+import { differenceInDays, parseISO } from "date-fns";
+
 export function collapseText(text, numWords) {
   return text.split(" ").slice(0, numWords).join(" ") + ".....";
 }
@@ -8,6 +10,9 @@ export const statusToTagColor = {
   false: "silver",
   unrelated: "purple",
 };
+
+export const subtractDates = (dateStr1, dateStr2) =>
+  differenceInDays(parseISO(String(dateStr1)), parseISO(String(dateStr2)));
 
 // Supabase needs an ISO date string. However, that string will be different on every render because the MS or SEC have changed, which isn't good. So we use this trick to remove any time
 export const getToday = function (options = {}) {

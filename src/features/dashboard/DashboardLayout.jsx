@@ -9,7 +9,7 @@ import ReportsGraph from "./ReportsGraph";
 
 const StyledDashboardLayout = styled.section`
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
+  grid-template-columns: 0.5fr repeat(11, 1fr);
   grid-template-rows: auto 32rem auto;
   gap: 1.8rem;
 `;

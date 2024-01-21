@@ -8,7 +8,7 @@ export function useRecentReports() {
   const [searchParams] = useSearchParams();
 
   let numDays = !searchParams.get("previous")
-    ? 7
+    ? 15
     : Number(searchParams.get("previous"));
 
   let queryDate;

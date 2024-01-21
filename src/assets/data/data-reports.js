@@ -12,7 +12,6 @@ function fromToday(numDays, withTime = false) {
 
 export const reports_data = [
   {
-    id: 1,
     created_at: fromToday(-498, true),
     reportDate: fromToday(-498),
     images: [imageUrl + "sample-img-1.jpg", imageUrl + "sample-img-2.jpg"],
@@ -32,7 +31,6 @@ export const reports_data = [
   },
 
   {
-    id: 2,
     created_at: fromToday(-450, true),
     reportDate: fromToday(-450),
     images: [imageUrl + "sample-img-3.jpg", imageUrl + "sample-img-4.jpg"],
@@ -51,7 +49,6 @@ export const reports_data = [
     status: "solved",
   },
   {
-    id: 3,
     created_at: fromToday(-450, true),
     reportDate: fromToday(-450),
     incidentDetails:
@@ -66,7 +63,6 @@ export const reports_data = [
     status: "unrelated",
   },
   {
-    id: 4,
     created_at: fromToday(-481, true),
     reportDate: fromToday(-481),
     images: [imageUrl + "sample-img-5.jpg"],
@@ -84,7 +80,6 @@ export const reports_data = [
     status: "probing",
   },
   {
-    id: 5,
     created_at: fromToday(-420, true),
     reportDate: fromToday(-420),
     images: [imageUrl + "sample-img-6.jpg"],
@@ -103,7 +98,6 @@ export const reports_data = [
     status: "probing",
   },
   {
-    id: 6,
     created_at: fromToday(-420, true),
     reportDate: fromToday(-420),
     images: [imageUrl + "sample-img-7.jpg"],
@@ -121,225 +115,222 @@ export const reports_data = [
     status: "solved",
   },
   {
-    id: 7,
-    created_at: fromToday(-45, true),
-    reportDate: fromToday(-45),
+    created_at: fromToday(-420, true),
+    reportDate: fromToday(-420),
     incidentDetails:
       "Unusual activity in a known drug hotspot. Group gathering in an area with a history of drug-related incidents.",
-    incidentDate: fromToday(-48),
-    addressDetails: "444 Alley Lane, Notorious City, State",
+    incidentDate: fromToday(-450),
+    addressDetails: null,
     numPersons: 5,
     personDetails:
       "Group of individuals gathering in a known drug hotspot. Some individuals wearing hoodies and acting suspiciously.",
     vehicleDetails: "Multiple bikes and a van present.",
     weaponsDetails: "None visible.",
     furtherInformation: "Known hotspot. Increased police presence requested.",
-    status: "probing",
-  },
-  {
-    id: 8,
-    created_at: fromToday(-80, true),
-    reportDate: fromToday(-80),
-    incidentDetails:
-      "Underground meeting suspected in a warehouse. Group seen entering a warehouse during odd hours.",
-    incidentDate: fromToday(-95),
-    addressDetails: "555 Warehouse Street, Industrial District, State",
-    numPersons: 8,
-    personDetails:
-      "Group of individuals entering a warehouse during unusual hours. Some individuals carrying bags.",
-    vehicleDetails: "No visible vehicles.",
-    weaponsDetails: "None observed.",
-    furtherInformation:
-      "Warehouse activities seem suspicious. Investigate immediately.",
     status: "false",
   },
   {
-    id: 9,
-    created_at: fromToday(-20, true),
-    reportDate: fromToday(-20),
+    created_at: fromToday(-418, true),
+    reportDate: fromToday(-418),
     incidentDetails:
-      "Teenagers suspected of drug use in a local park. Group of teenagers behaving erratically.",
-    incidentDate: fromToday(-22),
-    addressDetails: "666 Green Park, Suburbia, State",
-    numPersons: 6,
-    personDetails:
-      "Group of teenagers behaving erratically in the park. Some individuals appear to be under the influence.",
-    vehicleDetails: "None",
-    weaponsDetails: "None observed.",
-    furtherInformation:
-      "Concerns about drug use among teenagers. Increased patrolling requested.",
-    status: "false",
+      "This is not really a report, I just wanted to let ther team behind this platform know that, This platform has given me the confidence to report suspicious activities in my neighborhood, knowing that I'm contributing to community safety. And I am very thankful for this.",
+    incidentDate: fromToday(-418),
+    addressDetails: null,
+    numPersons: null,
+    personDetails: null,
+    vehicleDetails: null,
+    weaponsDetails: null,
+    furtherInformation: null,
+    status: "unrelated",
   },
   {
-    id: 10,
-    created_at: fromToday(-15, true),
-    reportDate: fromToday(-15),
+    created_at: fromToday(-415, true),
+    reportDate: fromToday(-415),
+    images: [imageUrl + "sample-img-8.jpg"],
     incidentDetails:
-      "Unattended backpack suspected in a public transport station. Suspicious backpack left unattended.",
-    incidentDate: fromToday(-20),
-    addressDetails: "777 Bus Station, Downtown, State",
-    numPersons: 0,
-    personDetails: "",
-    vehicleDetails: "None",
-    weaponsDetails: "None observed.",
-    furtherInformation:
-      "Unattended backpack causing suspicion. Immediate inspection needed.",
-    status: "unsolved",
-  },
-  {
-    id: 11,
-    created_at: fromToday(-289, true),
-    reportDate: fromToday(-289),
-    incidentDetails:
-      "Suspicious individuals seen in an abandoned building. Group engaged in suspicious activities.",
-    incidentDate: fromToday(-296),
-    addressDetails: "888 Abandoned Street, Outskirts, State",
-    numPersons: 4,
-    personDetails:
-      "Group of individuals engaged in suspicious activities in an abandoned building. Some individuals wearing masks.",
-    vehicleDetails: "No visible vehicles.",
-    weaponsDetails: "None observed.",
-    furtherInformation:
-      "Abandoned building activities seem unusual. Immediate intervention required.",
-    status: "false",
-  },
-  {
-    id: 12,
-    created_at: fromToday(-70, true),
-    reportDate: fromToday(-70),
-    incidentDetails:
-      "Unusual behavior in a local store. Individual acting nervously near the counter.",
-    incidentDate: fromToday(-73),
-    addressDetails: "999 Market Street, Suburbia, State",
-    numPersons: 1,
-    personDetails:
-      "Individual acting nervously near the store counter. Carrying a backpack and avoiding eye contact.",
-    vehicleDetails: "None",
-    weaponsDetails: "None observed.",
-    furtherInformation:
-      "Unusual behavior raises suspicion. Monitor the store for any illicit activities.",
-    status: "solved",
-  },
-  {
-    id: 13,
-    created_at: fromToday(-140, true),
-    reportDate: fromToday(-140),
-    incidentDetails:
-      "Late-night gathering in a park. Group seen gathering in the park during late hours.",
-    incidentDate: fromToday(-142),
-    addressDetails: "111 Midnight Park, Urban Center, State",
-    numPersons: 7,
-    personDetails:
-      "Group of individuals gathering in the park during late hours. Some individuals carrying backpacks.",
-    vehicleDetails: "No visible vehicles.",
-    weaponsDetails: "None observed.",
-    furtherInformation:
-      "Late-night gathering raises concerns. Increased patrol recommended.",
-    status: "probing",
-  },
-  {
-    id: 14,
-    created_at: fromToday(-30, true),
-    reportDate: fromToday(-30),
-    incidentDetails:
-      "Suspicious transaction in an alley. Individuals seen exchanging items in a narrow alley.",
-    incidentDate: fromToday(-35),
-    addressDetails: "222 Alley Lane, Downtown, State",
+      "So, I'm in the local park, right? And there are these two teenagers acting all kinds of strange. Their behavior is seriously erratic, and it's got me thinking: Could be some drug use or smuggling going on. They're making moves that just don't add up. I'm a bit concerned about what's happening, so I think it's crucial to dig deeper and figure out exactly what's going on with these teenagers and their questionable activities in the park.",
+    incidentDate: fromToday(-418),
+    addressDetails: "666 Green Park, Suburbia, Dharwad",
     numPersons: 2,
     personDetails:
-      "Two individuals engaging in a suspicious transaction in a narrow alley. Both individuals appear cautious.",
-    vehicleDetails: "None",
-    weaponsDetails: "None observed.",
+      "Two teenagers were observed in the park exchanging some stuff, which I suspect are drugs of some sort. One of them was of a dark complexion, and the other was of a wheatish complexion. both of them were of average height, about 5'7\" tall. Both of them had short hairs. No tattoos or any other distinguishing features were observed.",
+    vehicleDetails: null,
+    weaponsDetails: null,
     furtherInformation:
-      "Witnessed a suspicious transaction. Immediate investigation required.",
+      "Concerns about drug use among teenagers. Increased patrolling requested.",
     status: "solved",
   },
   {
-    id: 15,
-    created_at: fromToday(-1, true),
-    reportDate: fromToday(-1),
+    created_at: fromToday(-355, true),
+    reportDate: fromToday(-355),
+    images: [imageUrl + "sample-img-9.jpg"],
     incidentDetails:
-      "Large gathering near an abandoned warehouse. Group seen near an abandoned warehouse engaged in unknown activities.",
-    incidentDate: fromToday(-7),
-    addressDetails: "333 Warehouse Street, Industrial District, State",
-    numPersons: 10,
+      "A while back, I was at the district's railway station, and I observed two individuals whose gender wasn't clear, engaging in a discreet bag exchange near the station's backyard. The exchange appeared intentional, sparking suspicions about the contents being transferred. Given the clandestine nature of the event and its proximity to a public space, I believed it was crucial to investigate the incident to ensure the safety and security of the surrounding area.",
+    incidentDate: fromToday(-358),
+    addressDetails: "777 Railway Station, Naruto district, Hubli",
+    numPersons: 2,
     personDetails:
-      "Large group gathering near an abandoned warehouse. Some individuals carrying bags.",
-    vehicleDetails: "Multiple cars parked nearby.",
-    weaponsDetails: "None visible.",
-    furtherInformation:
-      "Unknown activities near the warehouse. Immediate investigation recommended.",
-    status: "false",
-  },
-  {
-    id: 16,
-    created_at: fromToday(-10, true),
-    reportDate: fromToday(-10),
-    incidentDetails:
-      "Suspicious vehicle parked for an extended period. Unattended vehicle raising suspicions.",
-    incidentDate: fromToday(-12),
-    addressDetails: "444 Parking Lot, City Center, State",
-    numPersons: 0,
-    personDetails: "",
-    vehicleDetails:
-      "Black sedan parked for an extended period. No visible occupants.",
-    weaponsDetails: "None observed.",
-    furtherInformation:
-      "Unattended vehicle raising suspicions. Immediate inspection required.",
+      "I noticed the incident from a far distance and was not able to identify who the individuals were, or any of their distinguishing features.",
+    vehicleDetails: null,
+    weaponsDetails: null,
+    furtherInformation: null,
     status: "unsolved",
   },
   {
-    id: 17,
-    created_at: fromToday(-6, true),
-    reportDate: fromToday(-6),
+    created_at: fromToday(-333, true),
+    reportDate: fromToday(-333),
+    images: [imageUrl + "sample-img-10.jpg"],
     incidentDetails:
-      "Individuals loitering near a school bus stop. Group seen loitering near a school bus stop.",
-    incidentDate: fromToday(-20),
-    addressDetails: "555 School Bus Stop, Suburbia, State",
-    numPersons: 5,
-    personDetails:
-      "Group of individuals loitering near a school bus stop. Some individuals appear to be underage.",
-    vehicleDetails: "None",
-    weaponsDetails: "None observed.",
-    furtherInformation:
-      "Concerns about loitering individuals. Increased patrolling recommended.",
-    status: "unsolved",
-  },
-  {
-    id: 18,
-    created_at: fromToday(-200, true),
-    reportDate: fromToday(-200),
-    incidentDetails:
-      "Individual acting suspiciously in a library. Suspicious behavior observed near the library entrance.",
-    incidentDate: fromToday(-220),
-    addressDetails: "666 Library Street, Downtown, State",
+      "Recently, I observed a man entering an abandoned building without any belongings and exiting with a packet. What caught my attention was his peculiar and suspicious behavior, almost as if he was trying to conceal his actions. After obtaining the packet, he proceeded to his car, where he exhibited continued uneasy behavior, and swiftly drove away. The entire sequence raised concerns, prompting the need for an investigation into the circumstances surrounding this individual's activities at the abandoned building.",
+    incidentDate: fromToday(-339),
+    addressDetails: "Near 888 Madara Street, Prefecture Station, Saitama",
     numPersons: 1,
     personDetails:
-      "Individual acting suspiciously near the library entrance. Carrying a backpack and constantly looking around.",
-    vehicleDetails: "None",
+      "It was only one pretty tall man, he was easily over 6 and a half feet tall. He was in his exercise clothes. One thing that was very noticeable and a distinguishing feature on him was he had a tattoo of a snake on his left shin.",
+    vehicleDetails:
+      "the man came to the building in a grey color Toyota Corolla bearing the registartion number ST 45 AB 3567.",
+    weaponsDetails: "I did not observe any weapons with the man.",
+    furtherInformation:
+      "Abandoned building activities seem unusual. Immediate intervention required.",
+    status: "unsolved",
+  },
+  {
+    created_at: fromToday(-300, true),
+    reportDate: fromToday(-300),
+    incidentDetails:
+      "As an anonymous user, I've seen my reports make a difference. Knowing that actions are taken to address the crimes I've reported gives me confidence in the effectiveness of this platform.",
+    incidentDate: fromToday(-300),
+    addressDetails: null,
+    numPersons: null,
+    personDetails: null,
+    vehicleDetails: null,
+    weaponsDetails: null,
+    furtherInformation: null,
+    status: "unrelated",
+  },
+  {
+    created_at: fromToday(-289, true),
+    reportDate: fromToday(-289),
+    images: [imageUrl + "sample-img-11.jpg"],
+    incidentDetails:
+      "I witnessed an unsettling event at a local petrol pump. Three men on separate motorcycles, hastily departed the pump premises immediately after leaving behind several packages at the pump's office. Their swift exit and the nature of the packages left behind raised significant concerns regarding this suspicious activity at the petrol pump.",
+    incidentDate: fromToday(-300),
+    addressDetails: "111 Ashok Petroleum, Urban Center, Draken",
+    numPersons: 3,
+    personDetails: "Group of 3 men. All of them probably in their late 20s.",
+    vehicleDetails:
+      "The men were using two vehicles. One was an old 2006 model Activa(black color), and the other one was an old model Hero Honda Splendor(black and purple color). I could not see the registration numbers of the two vehicles as they were at a distance from me.",
+    weaponsDetails: "None observed.",
+    furtherInformation: null,
+    status: "probing",
+  },
+  {
+    created_at: fromToday(-270, true),
+    reportDate: fromToday(-270),
+    images: [imageUrl + "sample-img-12.jpg"],
+    incidentDetails:
+      "Suspicious transaction in a stairway by individuals wearing PPE kit. Individuals seen exchanging items the narrow stairway. They were probably dressed in PPE kits to mimic medical workers and remove any unnecessary attention or suspicion from themselves.",
+    incidentDate: fromToday(-275),
+    addressDetails: "222 Alley Lane, Hashirama Road, Indra District",
+    numPersons: 2,
+    personDetails:
+      "Two individuals engaging in a suspicious transaction in a narrow stairway. Both individuals appear cautious. I have attached an image below of these individuals. Please take immediate action against tjose individuals.",
+    vehicleDetails: "None observed",
     weaponsDetails: "None observed.",
     furtherInformation:
-      "Suspicious behavior in the library. Immediate investigation needed.",
+      "If individuals are carrying out such disgraveful illegal drug trafficking activities in public, and that too in medical PPe kits, then this is a very concerning matter. How can we accept the actions of these people, who would not even consider the dignity of medical equipment and people invovled in the field of medicine, and use these equipments and the respected image of medical staff to their own selfish benefit.",
+    status: "probing",
+  },
+  {
+    created_at: fromToday(-280, true),
+    reportDate: fromToday(-280),
+    images: [imageUrl + "sample-img-13.jpg"],
+    incidentDetails:
+      "Some time ago, there was a concerning situation near an abandoned warehouse. A sizable gathering, predominantly consisting of homeless individuals, was observed engaging in the consumption of narcotic substances. This alarming scenario near the deserted warehouse arises the need for an investigation to ensure the safety of the community and address the potential risks associated with the presence of such a group in the area.",
+    incidentDate: fromToday(-290),
+    addressDetails: "333 Warehouse Street, Industrail Area, Jaipur",
+    numPersons: 15,
+    personDetails:
+      "Large group gathering near an abandoned warehouse. The group amy have well over 20 individuals, but I observed about 15 of them. Some individuals carrying bags, and all of them appeared to be homeless poor people.",
+    vehicleDetails: "No vehicleds around.",
+    weaponsDetails:
+      "Some individuals carrying knifes, machetes, and even cheap unregistered revolvers.",
+    furtherInformation:
+      "The presence of such individual poses a threat to the whole community, and therefore, I on behalf of the whole community demand immediate investigation in the matter and to take action as soon as possible against this case.",
+    status: "probing",
+  },
+  {
+    created_at: fromToday(-240, true),
+    reportDate: fromToday(-240),
+    images: [imageUrl + "sample-img-14.jpg"],
+    incidentDetails:
+      "I observed a distressing incident in a deserted area where a group of individuals was intimidating two teenage boys. The individuals were demanding money and packages from the boys and exhibited a heightened sense of caution, constantly surveilling the surroundings for any passerby or approaching individuals. The threatening behavior and clandestine activities raised immediate concerns, necessitating an investigation into the safety of the teenage boys and the potential criminal activity unfolding in the area.",
+    incidentDate: fromToday(-245),
+    addressDetails: "Near the outskirts of the abandoned old Industrial area",
+    numPersons: null,
+    personDetails:
+      "There were several individuals involved in the incident.I was not able to make out exactly how many of them were there. But one thing of significance was that most of the men were black and appeared to be from Africa. Some men even had their faces covered with masks.",
+    vehicleDetails: "A few motor bikes were present at the scene",
+    weaponsDetails: "The individuals carried knifes and guns.",
+    furtherInformation: null,
+    status: "unrelated",
+  },
+  {
+    created_at: fromToday(-200, true),
+    reportDate: fromToday(-200),
+    images: [imageUrl + "sample-img-15.jpg", imageUrl + "sample-img-16.jpg"],
+    incidentDetails:
+      "In a recent observation, I can confirm an individual engaging in the consumption of narcotic drugs obtained through illicit means. The person's behavior is notably altered under the influence of these drugs, indicating a clear misuse and potential involvement in drug trafficking. I reported this alarming situation to ensure swift intervention, addressing the drug misuse and preventing potential harm.",
+    incidentDate: fromToday(-230),
+    addressDetails: "555 Mob Society, Garou Road Exit-7, City-6.",
+    numPersons: 1,
+    personDetails:
+      "The individual is a 54-year old man named Parry Hotter, who works as a truck driver. His residence is in the society mentioned in the address details field.",
+    vehicleDetails:
+      "He drives a white color honda Aviator bearing the registration number C6 78 EG 9090.",
+    weaponsDetails:
+      "The individual I am reporting always carries a povket knife with him. As far as my knowledge on him, he does not carry any firearms.",
+    furtherInformation:
+      "This individual's behavior and involvement in drug trafficking and misuse is causing a sense of panic among the other society members. So, an immediate and strict action against this individual and the other people invovled with him is highly appreciated.",
     status: "solved",
   },
   {
-    id: 19,
-    created_at: fromToday(-15, true),
-    reportDate: fromToday(-15),
+    created_at: fromToday(-180, true),
+    reportDate: fromToday(-180),
+    images: [
+      imageUrl + "sample-img-17.jpg",
+      imageUrl + "sample-img-18.jpg",
+      imageUrl + "sample-img-19.jpg",
+    ],
     incidentDetails:
-      "Noise and disturbance in an apartment. Loud sounds and disturbance reported in a residential building.",
-    incidentDate: fromToday(-27),
-    addressDetails: "777 Quiet Street, Residential Area, State",
-    numPersons: 0,
-    personDetails: "",
-    vehicleDetails: "None",
+      "Two masked individuals, shrouded in mystery, arrived discreetly at a seemingly abandoned building, the eerie silence broken only by the hum of their black Tata Nexon. Their movements were swift and purposeful as they retrieved three bags from the car's trunk, carrying an air of urgency. With a synchronized entrance, they disappeared into the building, leaving onlookers to wonder about the nature of their clandestine activities.\nInside, the building's shadows concealed their actions, but after a significant passage of time, the mysterious pair emerged, transformed. Gone were the masks and the previous attire, replaced by new clothing and an added detail—an inconspicuous blue bag clutched in one of the individual's hands. The significance of this new addition remained a puzzle, as it wasn't visible during their initial entry.\nTheir departure was no less intriguing, with the two figures exiting at different intervals, creating a sense of calculated timing. After a brief five-minute interlude, they reappeared one after the other, slipping back into the world beyond the building's shadows. What followed was a high-speed departure, as the black sedan accelerated away, leaving behind unanswered questions and a lingering sense of unease.\nThis sequence of unusual events, marked by secrecy and rapid movements, underscores the need for a comprehensive report to bring attention to the potentially suspicious activities witnessed at the deserted building.",
+    incidentDate: fromToday(-185),
+    addressDetails: "Surrounding area near the old Railway underbridge",
+    numPersons: 2,
+    personDetails:
+      "Individual 1:\nPhysical Appearance: A tall figure, standing around 6 feet, with a lean build and a distinctive gait, suggesting a certain level of athleticism.\nClothing: Initially adorned in dark, nondescript clothing and a black mask concealing facial features.\nAdditional Details: Notable for an air of confidence and purpose, moving with precision during the covert operation.\n\nIndividual 2:\nPhysical Appearance: Of average height, approximately 5 feet 8 inches, with a more stocky build.\nClothing: Similar to the companion, dressed in dark clothing and wearing a mask that obscured facial identity.\nAdditional Details: Displayed a level of caution and awareness, suggesting a keen understanding of the need for discretion. The small blue bag held during the exit raises questions about its contents and its role in the entire scenario.\n\nI have attached their images which I was somehow able to take from my mobile from a distance.",
+    vehicleDetails:
+      "They came and drove off in the same vehicle, which was a black Tata Nexon. It did not have a registration number plate(probably beacuse it seemeed new). One notable thing I noticed regarding their car was that their was a long scratch on the car from the front door to the back door on the left side of the car.",
     weaponsDetails: "None observed.",
     furtherInformation:
-      "Reports of loud sounds and disturbance in the apartment building. Investigate promptly.",
-    status: "false",
+      "The building they entered was an abandoned building. Even the whole area was an abandoned area with only a few buildings in sight. There has not been any person or anyone using that building since a very long time. And, this is a very uninhabited area, even a single person passing by is a rare occurence.",
+    status: "probing",
   },
   {
-    id: 20,
+    created_at: fromToday(-180, true),
+    reportDate: fromToday(-180),
+    incidentDetails:
+      "Silent Witness provides a secure space for reporting. I've noticed the impact of my reports in addressing illegal drug activities, underscoring the effectiveness of anonymous community involvement.",
+    incidentDate: fromToday(-182),
+    addressDetails: null,
+    numPersons: 0,
+    personDetails: null,
+    vehicleDetails: null,
+    weaponsDetails: null,
+    furtherInformation: null,
+    status: "unrelated",
+  },
+  {
     created_at: fromToday(-183, true),
     reportDate: fromToday(-183),
     incidentDetails:
@@ -353,26 +344,25 @@ export const reports_data = [
     weaponsDetails: "None visible.",
     furtherInformation:
       "Unusual gathering raises suspicions. Immediate intervention recommended.",
-    status: "solved",
+    status: "false",
   },
   {
-    id: 21,
-    created_at: fromToday(-2, true),
-    reportDate: fromToday(-2),
+    created_at: fromToday(-150, true),
+    reportDate: fromToday(-150),
+    images: [imageUrl + "sample-img-20.jpg"],
     incidentDetails:
-      "Suspicious package found near a public event. Unattended package raises concerns.",
-    incidentDate: fromToday(-3),
-    addressDetails: "111 Festival Plaza, Downtown, State",
-    numPersons: 0,
-    personDetails: "",
-    vehicleDetails: "None",
-    weaponsDetails: "None observed.",
-    furtherInformation:
-      "Discovery of an unattended package near a public event. Immediate inspection required.",
-    status: "probing",
+      "Two teenagers casually strolled into the cozy cafe, their demeanor seemingly ordinary. As they approached the counter, they ordered their drinks with an air of nonchalance. However, upon receiving their beverages, their actions took a surreptitious turn. From the confines of their pockets emerged small, discreet packages containing a mysterious powdery substance.\nCarefully unwrapping the paper, they added the enigmatic powder to their drinks, exhibiting a level of secrecy that raised concerns. After consuming their modified beverages, the duo departed from the cafe, their departure marked by an unsteady gait and erratic behavior. The incident left an unsettling atmosphere in their wake, prompting the need for further investigation.",
+    incidentDate: fromToday(-151),
+    addressDetails: "Supreme Cafe, 111 Festival Plaza, State",
+    numPersons: 2,
+    personDetails:
+      "Both the teenagers seemed to be Caucasian. Both were probably in their early 20s. Both of average height. One of them had blonde hairs, and the other one had dark brown hairs.",
+    vehicleDetails: null,
+    weaponsDetails: null,
+    furtherInformation: null,
+    status: "unsolved",
   },
   {
-    id: 22,
     created_at: fromToday(-100, true),
     reportDate: fromToday(-100),
     incidentDetails:
@@ -380,151 +370,217 @@ export const reports_data = [
     incidentDate: fromToday(-103),
     addressDetails: "222 Mystic Park, Suburbia, State",
     numPersons: 5,
+    personDetails: null,
+    vehicleDetails: null,
+    weaponsDetails: null,
+    furtherInformation: null,
+    status: "false",
+  },
+  {
+    created_at: fromToday(-150, true),
+    reportDate: fromToday(-150),
+    incidentDetails:
+      "I appreciate the commitment to anonymity on Silent Witness. It's gratifying to see my reports lead to positive changes in the community, reinforcing the value of this platform.",
+    incidentDate: fromToday(-155),
+    addressDetails: null,
+    numPersons: null,
+    personDetails: null,
+    vehicleDetails: null,
+    weaponsDetails: null,
+    furtherInformation: null,
+    status: "unrelated",
+  },
+  {
+    created_at: fromToday(-149, true),
+    reportDate: fromToday(-149),
+    images: [
+      imageUrl + "sample-img-21.jpg",
+      imageUrl + "sample-img-22.jpg",
+      imageUrl + "sample-img-23.jpg",
+    ],
+    incidentDetails:
+      "In a desolate area, a man and a woman coincidentally cross paths. As they continue walking away from each other in their respective directions, an unexpected twist occurs. Swiftly and discreetly, the man seizes the opportunity to snatch the woman's handbag and hastily makes his escape, disappearing into the urban landscape. The sudden act of theft leaves the woman stunned, prompting an urgent need to report the incident for immediate intervention.",
+    incidentDate: fromToday(-150),
+    addressDetails: "444 Alley Street, Industrial District, State",
+    numPersons: 2,
     personDetails:
-      "Group of individuals conducting unusual rituals in Mystic Park. Some individuals dressed in peculiar attire.",
+      "I have attacheed the photos of the incident, please deduce the people from the photos.",
+    vehicleDetails: null,
+    weaponsDetails: null,
+    furtherInformation: null,
+    status: "unrelated",
+  },
+  {
+    created_at: fromToday(-120, true),
+    reportDate: fromToday(-120),
+    incidentDetails:
+      "Suspicious behavior near a school. Individual seen loitering near a school premises during school hours.",
+    incidentDate: fromToday(-130),
+    addressDetails: "555 School Street, Suburbia, State",
+    numPersons: 1,
+    personDetails:
+      "Individual acting suspiciously near a school. Carrying a backpack and observing the school premises.",
     vehicleDetails: "None",
     weaponsDetails: "None observed.",
     furtherInformation:
-      "Unusual activities in the park raise suspicions. Investigate promptly.",
+      "Concerns about suspicious behavior near a school. Increased security recommended.",
+    status: "false",
+  },
+
+  {
+    created_at: fromToday(-120, true),
+    reportDate: fromToday(-120),
+    incidentDetails:
+      "In a bustling marketplace, a vendor is observed engaging in suspicious activities. The individual, operating a small stall, appears to be selling ordinary goods but occasionally slips small packets to customers in a secretive manner. These packets seem to contain substances not typically associated with legal trade. The vendor's discreet behavior raises concerns about the possible involvement in illicit activities, necessitating immediate attention to ensure the safety of the community.",
+    incidentDate: fromToday(-122),
+    addressDetails: "555 School Street, Suburbia, State",
+    numPersons: 1,
+    personDetails:
+      "The Vendor is a middle-aged man aroud 50 years of age. He is of a short stature, fair complexion, and a bald head, with a thick mustache.",
+    vehicleDetails: null,
+    weaponsDetails: null,
+    furtherInformation: null,
     status: "solved",
   },
   {
-    id: 23,
-    created_at: fromToday(-2, true),
-    reportDate: fromToday(-2),
+    created_at: fromToday(-100, true),
+    reportDate: fromToday(-100),
     incidentDetails:
-      "Abandoned building suspected for drug storage. Unusual activities reported in an abandoned structure.",
-    incidentDate: fromToday(-9),
-    addressDetails: "333 Desolate Street, Outskirts, State",
-    numPersons: 0,
-    personDetails: "",
-    vehicleDetails: "None",
-    weaponsDetails: "None observed.",
+      "In a local park, a group of individuals is suspected of organizing covert meetings involving the exchange of small parcels. The group congregates in a secluded area, making exchanges and dispersing quickly, displaying behavior that raises suspicions of potential illicit transactions. This recurring pattern suggests an ongoing operation that warrants investigation to uncover any illegal activities and maintain public safety.",
+    incidentDate: fromToday(-105),
+    addressDetails: "Public Park, 555 School Street, Suburbia, State",
+    numPersons: 4,
+    personDetails:
+      "All the individuals are men probably in their early 30s. All of them always have their faces covered with clinical face masks.",
+    vehicleDetails: "None observed",
+    weaponsDetails: "One of the men carries a small pocketb knife.",
     furtherInformation:
-      "Abandoned building suspected for illegal activities. Immediate investigation needed.",
+      "Concerns about suspicious behavior in the lcoal park. Increased security and immediate action requested.",
+    status: "solved",
+  },
+  {
+    created_at: fromToday(-80, true),
+    reportDate: fromToday(-80),
+    incidentDetails:
+      "Two individuals, possibly involved in illicit activities, are observed meeting in a dimly lit alley. As they exchange small packages, their body language suggests an attempt to conceal their actions. The clandestine nature of the exchange, coupled with the secluded location, raises suspicions about the nature of their dealings, prompting the need for a thorough investigation to ascertain any potential criminal activities.",
+    incidentDate: fromToday(-82),
+    addressDetails: "400 Residential Area, SubUrb District, Ankleshwar",
+    numPersons: 2,
+    personDetails: null,
+    vehicleDetails: null,
+    weaponsDetails: null,
+    furtherInformation: null,
+    status: "solved",
+  },
+  {
+    created_at: fromToday(-45, true),
+    reportDate: fromToday(-45),
+    incidentDetails:
+      "A peculiar incident unfolded in a quiet residential neighborhood. Late at night, residents reported witnessing unusual behavior near an abandoned house. A group of individuals was spotted carrying what seemed to be containers of unknown substances into the building. The entire operation appeared clandestine, with the individuals carefully avoiding any attention. The sudden activity raised concerns among the locals, prompting the need for a thorough investigation to ensure the safety of the community.",
+    incidentDate: fromToday(-50),
+    addressDetails: "Hinata Society, Ostanian Street, State",
+    numPersons: null,
+    personDetails:
+      "Individual acting suspiciously in the residentail neighbourhood. All the individuals were tall looking men with their faces covered with face masks.",
+    vehicleDetails: "A black Mahindra Scorpio having the number PY 01 ES0111.",
+    weaponsDetails: "One of the men was carrying an assault rifle.",
+    furtherInformation:
+      "Concerns about the safety of the residents in the area lead to the submission of this report by a resident of the area.",
+    status: "probing",
+  },
+  {
+    created_at: fromToday(-30, true),
+    reportDate: fromToday(-30),
+    incidentDetails:
+      "A strange occurrence unfolded in a bustling shopping district. Witnesses reported an individual displaying suspicious behavior near the entrance of a popular shopping mall. The person, carrying a backpack, seemed to be loitering and observing the mall premises.",
+    incidentDate: fromToday(-32),
+    addressDetails: null,
+    numPersons: 1,
+    personDetails:
+      "Individual acting suspiciously near a school. Carrying a backpack and observing the mall premises.",
+    vehicleDetails: null,
+    weaponsDetails: null,
+    furtherInformation:
+      "Concerns about suspicious behavior near the mall. Increased security recommended.",
+    status: "false",
+  },
+
+  {
+    created_at: fromToday(-22, true),
+    reportDate: fromToday(-22),
+    incidentDetails:
+      "In a clandestine transaction behind the local society temple, a group of individuals engaged in a brief yet suspicious exchange. Several individuals received packets of drugs from a man, promptly compensating him with cash. Following the completion of their transaction, the group dispersed, each heading in a different direction, swiftly vanishing from sight. This discreet incident raises concerns about possible illicit activities near the community temple, warranting attention and investigation to maintain the safety of the area.",
+    incidentDate: fromToday(-25),
+    addressDetails: "Behind Society Temple, Brindhavan Society, Ankleshwar",
+    numPersons: 7,
+    personDetails:
+      "There were a total of 7 individuals. 6 of them(4 boys and 2 girls) who were receiving drugs and providing cash to the man were youngsters, probably college students. And there was a man who was handling them out packets of drugs. All the students had their faces covered with face masks, whereas the other tall man who was handing out the drugs had his face covered with a handkerchief. One thing that I particularly noticed about this man was that he had one of his eyes covered with a bandage.",
+    vehicleDetails:
+      "The youngsters arriived at the scene on different vehicles. Although, I did not see all the vehicles they used, I know of two of the vehicles. One of them was a red and black Bajaj Pulsar 150 with registration number JH 05 RT 9022, and the other one was a Matte Blue Suzuki Burgman Street 125 with registration number JH 04 EY 2099.",
+    weaponsDetails:
+      "The tall man handing out the drugs had a pistol with him, which I noticed while he used it to threatened one of the youngster for more cash.",
+    furtherInformation:
+      "This incident is a very concerning matter. People like these can cause a lot of trouble to the innocent people who visit the temple. So, i would like to request immmedaite probe into the matter.",
+    status: "solved",
+  },
+  {
+    created_at: fromToday(-15, true),
+    reportDate: fromToday(-15),
+    incidentDetails:
+      "In a distressing incident unfolding during the evening at around 5 PM, a homeless child became the victim of an abduction by two men on a bike, following a heated argument. Several hours later, the perpetrators returned to the same location and released the child. Upon closer inspection, it became apparent that the child had sustained bruises across his body, indicating potential harm. Additionally, troubling signs of intoxication were evident, and our community social worker observed concerning syringe punctures on the child's arms. This alarming occurrence demands immediate attention and investigation to ensure the well-being of the vulnerable child and address any potential criminal activities.",
+    incidentDate: fromToday(-18),
+    addressDetails: "Near the entrance of Lovely society, MG Road, Mumbai.",
+    numPersons: 2,
+    personDetails:
+      'The 2 individuals on the bike were wearing helmets, so their facial features could not be noticed. One thing that I was able to notice was that one of the bikers had a tattoo with the word "MOM ❤" on his left forearm.',
+    vehicleDetails:
+      "They used differnet bikes to abduct and to drop the child. The bike they used to abduct the child was a 2009 model Blue Honda Shine, whose registration number I could not note down due to the fast pace at which the incident took place. The bike they used to drop off the child was a black Bajaj Pulsar 220F bike bearing the registration number KA 29 H 3000.",
+    weaponsDetails: "None observed.",
+    furtherInformation: null,
     status: "unsolved",
   },
   {
-    id: 24,
+    created_at: fromToday(-6, true),
+    reportDate: fromToday(-6),
+    images: [imageUrl + "robert-lewandowski.jpg"],
+    incidentDetails:
+      "My name is Robert Lewandowski. I am a Social Worker and I do not mind my name being recorded. I would actually like you to use my name and photo to give the people courage to report such illegal drug trafficking activities that they notice.\nI just want to say that, I've witnessed the positive impact of community engagement on Silent Witness. It goes beyond reporting; it's about creating awareness and advocating for a drug-free society. And therefore I would like to thank the whole team behind this platform for taking such an exemplary initiative.",
+    incidentDate: fromToday(-7),
+    addressDetails: null,
+    numPersons: null,
+    personDetails: null,
+    vehicleDetails: null,
+    weaponsDetails: null,
+    furtherInformation: null,
+    status: "unrelated",
+  },
+  {
     created_at: fromToday(0, true),
     reportDate: fromToday(0),
     incidentDetails:
-      "Unauthorized access to a restricted area. Individuals seen entering a restricted zone without permission.",
-    incidentDate: fromToday(-20),
-    addressDetails: "444 Restricted Zone, Industrial District, State",
-    numPersons: 3,
-    personDetails:
-      "Group of individuals accessing a restricted zone without authorization. Some individuals wearing masks.",
-    vehicleDetails: "None",
-    weaponsDetails: "None observed.",
-    furtherInformation:
-      "Unauthorized access to a restricted area raises concerns. Immediate intervention required.",
-    status: "solved",
-  },
-  {
-    id: 25,
-    created_at: fromToday(-1, true),
-    reportDate: fromToday(-1),
-    incidentDetails:
-      "Suspicious behavior near a school. Individual seen loitering near a school premises during school hours.",
-    incidentDate: fromToday(-16),
+      "An unsettling discovery unfolded as the belongings of a recently deceased neighbor were examined. Mysterious circumstances surrounded the individual's demise, given their seemingly robust health. Upon inspecting the cupboards, an unusual find emerged — containers filled with a powdery substance of unknown origin. The peculiar nature of this finding raises questions about the circumstances of the neighbor's death and calls for a thorough investigation to uncover any potential foul play or health-related concerns.",
+    incidentDate: fromToday(-5),
     addressDetails: "555 School Street, Suburbia, State",
-    numPersons: 1,
-    personDetails:
-      "Individual acting suspiciously near a school. Carrying a backpack and observing the school premises.",
-    vehicleDetails: "None",
-    weaponsDetails: "None observed.",
+    numPersons: null,
+    personDetails: null,
+    vehicleDetails: null,
+    weaponsDetails: null,
     furtherInformation:
-      "Concerns about suspicious behavior near a school. Increased security recommended.",
-    status: "unsolved",
-  },
-
-  {
-    id: 26,
-    created_at: fromToday(-10000, true),
-    reportDate: fromToday(-10000),
-    incidentDetails:
-      "Suspicious behavior near a school. Individual seen loitering near a school premises during school hours.",
-    incidentDate: fromToday(-16),
-    addressDetails: "555 School Street, Suburbia, State",
-    numPersons: 1,
-    personDetails:
-      "Individual acting suspiciously near a school. Carrying a backpack and observing the school premises.",
-    vehicleDetails: "None",
-    weaponsDetails: "None observed.",
-    furtherInformation:
-      "Concerns about suspicious behavior near a school. Increased security recommended.",
+      "One thing that the locals were noticing was that the deceased who worked a 9-5 job and who always used to come back home by 7, started coming back home very late in the night, like at 1am or 2am.",
     status: "unsolved",
   },
   {
-    id: 27,
-    created_at: fromToday(-99909, true),
-    reportDate: fromToday(-99909),
+    created_at: fromToday(-2, true),
+    reportDate: fromToday(-2),
     incidentDetails:
-      "Suspicious behavior near a school. Individual seen loitering near a school premises during school hours.",
-    incidentDate: fromToday(-16),
-    addressDetails: "555 School Street, Suburbia, State",
-    numPersons: 1,
-    personDetails:
-      "Individual acting suspiciously near a school. Carrying a backpack and observing the school premises.",
-    vehicleDetails: "None",
-    weaponsDetails: "None observed.",
-    furtherInformation:
-      "Concerns about suspicious behavior near a school. Increased security recommended.",
-    status: "unsolved",
-  },
-
-  {
-    id: 28,
-    created_at: fromToday(-5000, true),
-    reportDate: fromToday(-5000),
-    incidentDetails:
-      "Suspicious behavior near a school. Individual seen loitering near a school premises during school hours.",
-    incidentDate: fromToday(-16),
-    addressDetails: "555 School Street, Suburbia, State",
-    numPersons: 1,
-    personDetails:
-      "Individual acting suspiciously near a school. Carrying a backpack and observing the school premises.",
-    vehicleDetails: "None",
-    weaponsDetails: "None observed.",
-    furtherInformation:
-      "Concerns about suspicious behavior near a school. Increased security recommended.",
-    status: "unsolved",
-  },
-
-  {
-    id: 29,
-    created_at: fromToday(-2000, true),
-    reportDate: fromToday(-2000),
-    incidentDetails:
-      "Suspicious behavior near a school. Individual seen loitering near a school premises during school hours.",
-    incidentDate: fromToday(-16),
-    addressDetails: "555 School Street, Suburbia, State",
-    numPersons: 1,
-    personDetails:
-      "Individual acting suspiciously near a school. Carrying a backpack and observing the school premises.",
-    vehicleDetails: "None",
-    weaponsDetails: "None observed.",
-    furtherInformation:
-      "Concerns about suspicious behavior near a school. Increased security recommended.",
-    status: "unsolved",
-  },
-
-  {
-    id: 30,
-    created_at: fromToday(-900, true),
-    reportDate: fromToday(-900),
-    incidentDetails:
-      "Suspicious behavior near a school. Individual seen loitering near a school premises during school hours.",
-    incidentDate: fromToday(-16),
-    addressDetails: "555 School Street, Suburbia, State",
-    numPersons: 1,
-    personDetails:
-      "Individual acting suspiciously near a school. Carrying a backpack and observing the school premises.",
-    vehicleDetails: "None",
-    weaponsDetails: "None observed.",
-    furtherInformation:
-      "Concerns about suspicious behavior near a school. Increased security recommended.",
+      "In the heart of the city, an unexpected incident transpired during a bustling evening. Witnesses reported a peculiar gathering in an alley behind a local market. A group of individuals, adorned in mysterious attire, engaged in cryptic rituals, exchanging peculiar artifacts. The air was filled with an eerie energy, and passersby couldn't help but feel uneasy. As the group dispersed, leaving behind an enigmatic symbol drawn on the ground, concerns arose about the nature of their activities. The community, disturbed by this unusual occurrence, called for an investigation to unravel the secrets hidden within the city's shadows.      ",
+    incidentDate: fromToday(-3),
+    addressDetails: null,
+    numPersons: null,
+    personDetails: null,
+    vehicleDetails: null,
+    weaponsDetails: null,
+    furtherInformation: null,
     status: "unsolved",
   },
 ];

@@ -12,6 +12,7 @@ function ReportsTableOperations() {
           { value: "solved", label: "Solved" },
           { value: "unsolved", label: "Unsolved" },
           { value: "probing", label: "Probing" },
+          { value: "unrelated", label: "Unrelated" },
           { value: "false", label: "False" },
         ]}
       />

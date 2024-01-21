@@ -3,7 +3,7 @@ import { format } from "date-fns";
 import { PiNotePencilDuotone } from "react-icons/pi";
 
 import Tag from "../../ui/Tag";
-import { statusToTagColor } from "../../utils/helpers";
+import { statusToTagColor, subtractDates } from "../../utils/helpers";
 
 const DetailsBox = styled.section`
   background-color: var(--color-grey-0);
@@ -225,7 +225,20 @@ function ReportDetails({ report }) {
           </p>
         </div>
         <div>
-          <p>Some data</p>
+          <p>
+            This case is reported{" "}
+            <strong
+              style={{
+                color: "var(--color-grey-0)",
+                backgroundColor: "var(--color-brand-700)",
+                padding: "0 7px",
+                borderRadius: "var(--border-radius-lg)",
+              }}
+            >
+              {subtractDates(reportDate, incidentDate)} days
+            </strong>{" "}
+            after the Incident date
+          </p>
         </div>
       </Header>
 
