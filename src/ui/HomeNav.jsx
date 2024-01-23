@@ -9,6 +9,7 @@ import ButtonLink from "./ButtonLink";
 
 import { useHomeScroll } from "../contexts/HomeScrollContext";
 import { homeNavlinks_data as homeNavbarLinks } from "../assets/data/data-navlinks";
+import { createPortal } from "react-dom";
 
 const Header = styled.header`
   display: flex;
@@ -24,11 +25,10 @@ const Header = styled.header`
       padding: 0;
       position: fixed;
       top: 0;
-      bottom: 0;
+      left: 0;
       background-color: rgba(255, 255, 255, 0.9);
-      backdrop-filter: blur(5px);
-      z-index: 10;
-      box-shadow: var(--shadow-md);
+      z-index: 20;
+      /* box-shadow: var(--shadow-md); */
     `}
 
   ${(props) =>
@@ -51,8 +51,12 @@ const NavBar = styled.nav`
   align-items: center;
   justify-content: space-between;
 
-  @media (max-width: 81rem) {
+  @media (max-width: 81em) {
     padding: 1.2rem 2rem;
+  }
+
+  @media (max-width: 75em) {
+    position: relative;
   }
 `;
 
@@ -62,11 +66,24 @@ const LogoBox = styled.div`
   cursor: pointer;
 `;
 
+const NavList = styled.ul`
+  padding: 1.2rem 0.8rem;
+  border-radius: var(--border-radius-lg);
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  @media (max-width: 75em) {
+    display: none;
+  }
+`;
+
 const MobileNavButton = styled.button`
   background: none;
   border: none;
   border-radius: 50%;
-  padding: 1rem;
+  padding: ${(props) => (props.open ? 0 : "1rem")};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -78,27 +95,114 @@ const MobileNavButton = styled.button`
   }
 
   & svg {
-    height: 4.5rem;
-    width: 4.5rem;
-    fill: var(--color-brand-700);
+    height: ${(props) => (props.open ? 0 : "4.5rem")};
+    width: ${(props) => (props.open ? 0 : "4.5rem")};
+    fill: ${(props) => (props.open ? "transparent" : "var(--color-brand-700)")};
   }
 
-  @media (max-width: 75rem) {
+  @media (max-width: 75em) {
     display: block;
+    position: absolute;
+    top: 50%;
+    right: 2%;
+    z-index: 1000;
+    transform: translateY(-50%);
   }
 `;
 
-const NavList = styled.ul`
-  padding: 1.2rem 0.8rem;
-  border-radius: var(--border-radius-lg);
+const MobileNavCloseButton = styled(MobileNavButton)`
+  position: absolute;
+  top: 5rem;
+  right: 2rem;
+
+  & svg {
+    height: 4.5rem;
+    width: 4.5rem;
+  }
+`;
+
+const MobileNav = styled.div`
+  position: relative;
+
+  background-color: rgba(255, 255, 255, 0.95);
+
+  height: 100svh;
+  width: 70%;
+  z-index: 30;
+  margin-left: auto;
 
   display: flex;
   align-items: center;
-  gap: 1rem;
+  justify-content: center;
 
-  @media (max-width: 75rem) {
-    display: none;
+  transition: all 0.3s ease-in;
+
+  ${(props) =>
+    props.$open === "false" &&
+    css`
+      opacity: 0;
+      pointer-events: none;
+      visibility: hidden;
+
+      transform: translateX(100%);
+    `}
+
+  ${(props) =>
+    props.$open === "true" &&
+    css`
+      opacity: 1;
+      pointer-events: auto;
+      visibility: visible;
+
+      transform: translateX(0);
+    `}
+`;
+
+const MobileNavList = styled.ul`
+  display: none;
+
+  @media (max-width: 75em) {
+    height: 100%;
+    padding: 0 4rem;
+    width: 100%;
+    z-index: 30;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
+`;
+
+const Overlay = styled.div`
+  width: 100%;
+  height: 100dvh;
+
+  overflow: hidden;
+
+  background-color: var(--backdrop-color);
+  backdrop-filter: blur(4px);
+  z-index: 25;
+  transition: all 0.5s;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  ${(props) =>
+    props.$open === "false" &&
+    css`
+      opacity: 0;
+      pointer-events: none;
+      visibility: hidden;
+    `}
+
+  ${(props) =>
+    props.$open === "true" &&
+    css`
+      opacity: 1;
+      pointer-events: auto;
+      visibility: visible;
+    `}
 `;
 
 const StyledLink = styled(Link)`
@@ -175,32 +279,27 @@ function HomeNav() {
           <Logo />
         </LogoBox>
 
-        <MobileNavButton onClick={handleMobileNav}>
+        <MobileNavButton onClick={handleMobileNav} open={isOpen}>
           {isOpen ? <HiX /> : <HiMenu />}
         </MobileNavButton>
 
-        {/* {isOpen ? (
-          <NavList>
-            {homeNavbarLinks.map((link) => (
-              <NavLink linkTo={link.linkTo} name={link.name} key={link.id} />
-            ))}
-            <li>
-              <ButtonLink to="/login" size="large" variation="primary">
-                Authorized Login
-              </ButtonLink>
-            </li>
-          </NavList>
-        ) : (
-          <div
-            style={{
-              height: "9rem",
-              width: "9rem",
-              backgroundColor: "yellowgreen",
-            }}
-          >
-            abcd
-          </div>
-        )} */}
+        {createPortal(
+          <Overlay $open={isOpen ? "true" : "false"}>
+            <MobileNav $open={isOpen ? "true" : "false"}>
+              <MobileNavCloseButton onClick={handleMobileNav}>
+                {isOpen ? <HiX /> : <HiMenu />}
+              </MobileNavCloseButton>
+              <MobileNavList>
+                <li>Home</li>
+                <li>How to report</li>
+                <li>Operations</li>
+                <li>Features</li>
+                <li>FAQs</li>
+              </MobileNavList>
+            </MobileNav>
+          </Overlay>,
+          document.body
+        )}
 
         <NavList>
           {homeNavbarLinks.map((link) => (

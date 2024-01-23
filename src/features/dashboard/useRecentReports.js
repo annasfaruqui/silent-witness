@@ -8,17 +8,10 @@ export function useRecentReports() {
   const [searchParams] = useSearchParams();
 
   let numDays = !searchParams.get("previous")
-    ? 15
+    ? 7
     : Number(searchParams.get("previous"));
 
-  let queryDate;
-
-  if (searchParams.get("previous") !== "all-time")
-    queryDate = subDays(new Date(), numDays).toISOString();
-
-  if (searchParams.get("previous") === "all-time") {
-    numDays = queryDate = "all-time";
-  }
+  const queryDate = subDays(new Date(), numDays).toISOString();
 
   const { isPending, data: reports } = useQuery({
     queryFn: () => getReportsAfterDate(queryDate),

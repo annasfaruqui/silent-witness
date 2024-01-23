@@ -7,6 +7,7 @@ import {
   IoEyeOutline,
   IoTrashOutline,
 } from "react-icons/io5";
+import { GoUnlink } from "react-icons/go";
 
 import Table from "../../ui/Table";
 import Tag from "../../ui/Tag";
@@ -19,6 +20,7 @@ import { useDeleteReport } from "./useDeleteReport";
 
 import { MAX_WORDS } from "../../utils/constants";
 import { collapseText, statusToTagColor } from "../../utils/helpers";
+import ConfirmUpdateStatus from "../../ui/ConfirmUpdateStatus";
 
 const ReportNumber = styled.p`
   font-size: var(--font-lg);
@@ -72,35 +74,28 @@ function ReportRow({ report }) {
             >
               See details
             </Menus.Button>
+
             {status === "probing" && (
-              <Menus.Button
-                icon={<IoCheckmark />}
-                disabled={isUpdating}
-                onClick={() =>
-                  updateReport({
-                    reportData: { ...report, status: "solved" },
-                    id: reportId,
-                  })
-                }
-              >
-                Mark as solved
-              </Menus.Button>
+              <Modal.Open opens="solved-report">
+                <Menus.Button icon={<IoCheckmark />}>
+                  Mark as Solved
+                </Menus.Button>
+              </Modal.Open>
             )}
 
             {(status === "probing" || status === "unsolved") && (
-              <Menus.Button
-                icon={<IoClose />}
-                disabled={isUpdating}
-                onClick={() =>
-                  updateReport({
-                    reportData: { ...report, status: "false" },
-                    id: reportId,
-                  })
-                }
-              >
-                Mark as false
-              </Menus.Button>
+              <>
+                <Modal.Open opens="unrelated-report">
+                  <Menus.Button icon={<GoUnlink />}>
+                    Mark as Unrelated
+                  </Menus.Button>
+                </Modal.Open>
+                <Modal.Open opens="false-report">
+                  <Menus.Button icon={<IoClose />}>Mark as False</Menus.Button>
+                </Modal.Open>
+              </>
             )}
+
             <Modal.Open opens="delete-report">
               <Menus.Button icon={<IoTrashOutline />}>
                 Delete report
@@ -108,6 +103,49 @@ function ReportRow({ report }) {
             </Modal.Open>
           </Menus.List>
         </Menus.Menu>
+
+        <Modal.Window name="solved-report">
+          <ConfirmUpdateStatus
+            resourceName="report"
+            disabled={isUpdating}
+            status="solved"
+            onConfirm={() =>
+              updateReport({
+                reportData: { ...report, status: "solved" },
+                id: reportId,
+              })
+            }
+          />
+        </Modal.Window>
+
+        <Modal.Window name="unrelated-report">
+          <ConfirmUpdateStatus
+            resourceName="report"
+            disabled={isUpdating}
+            status="unrelated"
+            onConfirm={() =>
+              updateReport({
+                reportData: { ...report, status: "unrelated" },
+                id: reportId,
+              })
+            }
+          />
+        </Modal.Window>
+
+        <Modal.Window name="false-report">
+          <ConfirmUpdateStatus
+            resourceName="report"
+            disabled={isUpdating}
+            status="false"
+            type="danger"
+            onConfirm={() =>
+              updateReport({
+                reportData: { ...report, status: "false" },
+                id: reportId,
+              })
+            }
+          />
+        </Modal.Window>
 
         <Modal.Window name="delete-report">
           <ConfirmDelete

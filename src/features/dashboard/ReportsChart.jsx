@@ -16,7 +16,7 @@ const StyledReportsChart = styled.div`
 
   padding: 2.4rem 3.2rem;
 
-  grid-column: 8 / -1;
+  grid-column: 7 / -1;
 `;
 
 const startDataReports = [
@@ -38,7 +38,7 @@ const startDataReports = [
   {
     status: "Unrelated cases",
     value: 0,
-    color: "#4338ca",
+    color: "#6366f1",
   },
   {
     status: "False cases",

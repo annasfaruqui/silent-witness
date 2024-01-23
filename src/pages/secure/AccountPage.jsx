@@ -6,7 +6,7 @@ import UpdatePasswordForm from "../../features/authentication/UpdatePasswordForm
 function AccountPage() {
   return (
     <>
-      <Heading as="h1">Update account</Heading>
+      <Heading as="h1">Update your account</Heading>
 
       <Row>
         <Heading as="h2">Update user data</Heading>

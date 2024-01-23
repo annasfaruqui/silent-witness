@@ -42,6 +42,10 @@ const Box = styled.div`
     flex-direction: column;
     align-items: center;
   }
+
+  @media (max-width: 32em) {
+    padding: 0 5rem;
+  }
 `;
 
 const TextBox = styled.div`
@@ -86,6 +90,11 @@ const TextBox = styled.div`
       font-size: 5.8rem;
       margin-bottom: 2rem;
     }
+
+    @media (max-width: 32em) {
+      font-size: 5rem;
+      margin-bottom: 1.6rem;
+    }
   }
 
   & h2 {
@@ -102,11 +111,11 @@ const TextBox = styled.div`
     }
 
     @media (max-width: 56em) {
-      font-size: 2rem;
+      font-size: var(--font-lg);
     }
 
     @media (max-width: 32em) {
-      font-size: var(--font-lg);
+      font-size: var(--font-md);
     }
   }
 `;
@@ -120,6 +129,12 @@ const ButtonBox = styled.div`
   margin-top: 1.4rem;
   display: flex;
   gap: 2.4rem;
+
+  @media (max-width: 32em) {
+    flex-direction: column;
+    width: 60%;
+    gap: 1.2rem;
+  }
 `;
 
 const ImgBox = styled.div`

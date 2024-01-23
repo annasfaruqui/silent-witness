@@ -12,7 +12,7 @@ import FileInput from "../../ui/FileInput";
 import { useCreateReport } from "./useCreateReport";
 import { getToday } from "../../utils/helpers";
 
-function ReportForm() {
+function CreateReportForm() {
   const { isCreating, createReport } = useCreateReport();
   const { register, handleSubmit, reset, formState } = useForm();
   const { errors } = formState;
@@ -88,7 +88,6 @@ function ReportForm() {
               required: "This field is required",
               valueAsDate: true,
               validate: (value) =>
-                // new Date(value).toDateString() <= new Date().toDateString() ||
                 new Date(value).toISOString() <= new Date().toISOString() ||
                 "Incident date cannot be greater than report date",
             })}
@@ -308,4 +307,4 @@ function ReportForm() {
   );
 }
 
-export default ReportForm;
+export default CreateReportForm;

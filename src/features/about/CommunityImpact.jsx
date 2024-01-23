@@ -113,7 +113,7 @@ function CommunityImpact() {
           case on our platform without any fear of your identity being revealed
           to anyone.
         </p>
-        <ButtonLink to="/report" size="large">
+        <ButtonLink to="/report-form" size="large">
           Report Now
         </ButtonLink>
       </JoinUs>

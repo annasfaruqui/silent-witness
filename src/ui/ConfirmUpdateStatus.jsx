@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 import Button from "./Button";
 import Heading from "./Heading";
+import { capitalizeFirstLetter } from "../utils/capitalizer";
 
 const StyledConfirmUpdate = styled.div`
   width: 40rem;
@@ -30,12 +31,17 @@ function ConfirmUpdateStatus({
   type,
   status,
 }) {
+  function handleClick() {
+    onConfirm();
+    setTimeout(onCloseModal, 500);
+  }
+
   return (
     <StyledConfirmUpdate>
       <Heading as="h3">Update {resourceName}</Heading>
       <p>
         Are you sure you want to update the status of this {resourceName} to{" "}
-        {status}?
+        <strong>&ldquo;{capitalizeFirstLetter(status)}&rdquo;</strong>?
       </p>
 
       <div>
@@ -49,9 +55,9 @@ function ConfirmUpdateStatus({
         <Button
           variation={type === "danger" ? "danger" : "primary"}
           disabled={disabled}
-          onClick={onConfirm}
+          onClick={handleClick}
         >
-          Mark as {status}
+          Mark as {capitalizeFirstLetter(status)}
         </Button>
       </div>
     </StyledConfirmUpdate>

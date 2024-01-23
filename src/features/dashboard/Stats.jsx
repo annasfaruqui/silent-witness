@@ -1,18 +1,16 @@
 import {
-  TbShield,
   TbShieldCancel,
   TbShieldCheck,
   TbShieldExclamation,
-  TbShieldHalf,
+  TbShieldQuestion,
   TbShieldSearch,
 } from "react-icons/tb";
 
 import Stat from "./Stat";
 
 function Stats({ reports }) {
-  const numReports = reports.length;
-
   const statuses = reports.map((report) => report.status);
+
   const solvedReports = statuses.filter((status) => status === "solved");
   const unsolvedReports = statuses.filter((status) => status === "unsolved");
   const probingReports = statuses.filter((status) => status === "probing");
@@ -25,49 +23,37 @@ function Stats({ reports }) {
   const numFalseReports = falseReports.length;
   const numUnrelatedReports = unrelatedReports.length;
 
-  const percentageSolved = ((numSolvedReports / numReports) * 100).toFixed(2);
-  const percentageUnsolved = ((numUnsolvedReports / numReports) * 100).toFixed(
-    2
-  );
-  const percentageProbing = ((numProbingReports / numReports) * 100).toFixed(2);
-  const percentageFalse = ((numFalseReports / numReports) * 100).toFixed(2);
-  const percentageUnrelated = (
-    (numUnrelatedReports / numReports) *
-    100
-  ).toFixed(2);
-
   return (
     <>
-      <Stat title="Total" color="blue" icon={<TbShield />} value={numReports} />
       <Stat
-        title="Solved %"
+        title="Solved cases"
         color="green"
         icon={<TbShieldCheck />}
-        value={percentageSolved}
+        value={numSolvedReports}
       />
       <Stat
-        title="Unsolved %"
+        title="Unsolved cases"
         color="red"
         icon={<TbShieldExclamation />}
-        value={percentageUnsolved}
+        value={numUnsolvedReports}
       />
       <Stat
-        title="Probing %"
+        title="Probing cases"
         color="yellow"
         icon={<TbShieldSearch />}
-        value={percentageProbing}
+        value={numProbingReports}
       />
       <Stat
-        title="False %"
+        title="False cases"
         color="silver"
         icon={<TbShieldCancel />}
-        value={percentageFalse}
+        value={numFalseReports}
       />
       <Stat
-        title="Unrelated %"
+        title="Unrelated cases"
         color="purple"
-        icon={<TbShieldHalf />}
-        value={percentageUnrelated}
+        icon={<TbShieldQuestion />}
+        value={numUnrelatedReports}
       />
     </>
   );

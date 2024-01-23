@@ -18,6 +18,7 @@ import { useMoveBack } from "../../hooks/useMoveBack";
 import { useReport } from "./useReport";
 import { useDeleteReport } from "./useDeleteReport";
 import { useUpdateReport } from "./useUpdateReport";
+import ConfirmUpdateStatus from "../../ui/ConfirmUpdateStatus";
 
 const HeadingBox = styled.div`
   display: flex;
@@ -54,65 +55,106 @@ function Report() {
       <ReportDetails report={report} />
 
       <ButtonGroup>
-        {status === "unsolved" && (
-          <Button
-            disabled={isUpdating}
-            onClick={() =>
-              updateReport({
-                reportData: { ...report, status: "probing" },
-                id: reportId,
-              })
-            }
-          >
-            Start investigation
-          </Button>
-        )}
-
         <Modal>
+          {status === "unsolved" && (
+            <>
+              <Modal.Open opens="probe">
+                <Button>Start investigation</Button>
+              </Modal.Open>
+            </>
+          )}
+
           {status === "probing" && (
-            <Button
-              disabled={isUpdating}
-              onClick={() =>
-                updateReport({
-                  reportData: { ...report, status: "solved" },
-                  id: reportId,
-                })
-              }
-            >
-              Mark as solved
-            </Button>
+            <Modal.Open opens="solved">
+              <Button>Mark as solved</Button>
+            </Modal.Open>
           )}
 
           {(status === "probing" || status === "unsolved") && (
-            <Button
-              variation="danger"
-              disabled={isUpdating}
-              onClick={() =>
-                updateReport({
-                  reportData: { ...report, status: "false" },
-                  id: reportId,
-                })
-              }
-            >
-              Mark as false report
-            </Button>
+            <>
+              <Modal.Open opens="unrelated">
+                <Button variation="secondary">Mark as unrelated report</Button>
+              </Modal.Open>
+              <Modal.Open opens="false">
+                <Button variation="danger">Mark as false report</Button>
+              </Modal.Open>
+            </>
           )}
 
           <Modal.Open opens="delete">
             <Button variation="danger">Delete report</Button>
           </Modal.Open>
 
-          <Modal.Window name="delete">
-            <ConfirmDelete
-              resourceName="report"
-              disabled={isDeleting}
-              onConfirm={() =>
-                deleteReport(reportId, {
-                  onSettled: moveBack,
-                })
-              }
-            />
-          </Modal.Window>
+          <>
+            <Modal.Window name="probe">
+              <ConfirmUpdateStatus
+                resourceName="report"
+                status="probing"
+                disabled={isUpdating}
+                onConfirm={() =>
+                  updateReport({
+                    reportData: { ...report, status: "probing" },
+                    id: reportId,
+                  })
+                }
+              />
+            </Modal.Window>
+
+            <Modal.Window name="solved">
+              <ConfirmUpdateStatus
+                resourceName="report"
+                status="solved"
+                disabled={isUpdating}
+                onConfirm={() =>
+                  updateReport({
+                    reportData: { ...report, status: "solved" },
+                    id: reportId,
+                  })
+                }
+              />
+            </Modal.Window>
+
+            <Modal.Window name="unrelated">
+              <ConfirmUpdateStatus
+                resourceName="report"
+                status="unrelated"
+                disabled={isUpdating}
+                onConfirm={() =>
+                  updateReport({
+                    reportData: { ...report, status: "unrelated" },
+                    id: reportId,
+                  })
+                }
+              />
+            </Modal.Window>
+
+            <Modal.Window name="false">
+              <ConfirmUpdateStatus
+                resourceName="report"
+                status="false"
+                type="danger"
+                disabled={isUpdating}
+                onConfirm={() =>
+                  updateReport({
+                    reportData: { ...report, status: "false" },
+                    id: reportId,
+                  })
+                }
+              />
+            </Modal.Window>
+
+            <Modal.Window name="delete">
+              <ConfirmDelete
+                resourceName="report"
+                disabled={isDeleting}
+                onConfirm={() =>
+                  deleteReport(reportId, {
+                    onSettled: moveBack,
+                  })
+                }
+              />
+            </Modal.Window>
+          </>
         </Modal>
 
         <Button variation="secondary" onClick={moveBack}>

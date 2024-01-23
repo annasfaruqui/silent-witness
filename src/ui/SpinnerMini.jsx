@@ -8,7 +8,10 @@ const rotate = keyframes`
 `;
 
 const SpinnerMini = styled(BiLoaderAlt)`
-  color: var(--color-brand-400);
+  color: ${(props) =>
+    props.danger === "true"
+      ? "var(--color-red-100)"
+      : "var(--color-brand-400)"};
   width: 2.4rem;
   height: 2.4rem;
   animation: ${rotate} 1.5s infinite linear;

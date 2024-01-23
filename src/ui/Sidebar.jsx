@@ -6,14 +6,14 @@ import Uploader from "../assets/Uploader";
 
 const StyledSidebar = styled.aside`
   background-color: var(--color-grey-0);
-  padding: 5rem 2.4rem 3.2rem;
-  border-right: 1px solid var(--color-brand-600);
+  padding: 3rem 2.4rem;
+  border-right: 1px solid var(--color-brand-400);
 
   grid-row: 1/-1;
 
   display: flex;
   flex-direction: column;
-  gap: 3.2rem;
+  gap: 5rem;
 `;
 
 function Sidebar() {

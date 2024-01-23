@@ -4,7 +4,7 @@ import { useUser } from "./useUser";
 
 const StyledUserAvatar = styled.div`
   display: flex;
-  gap: 1.2rem;
+  gap: 1rem;
   align-items: center;
   font-weight: 500;
   font-size: 1.4rem;
@@ -19,7 +19,6 @@ const Avatar = styled.img`
   object-fit: cover;
   object-position: center;
   border-radius: 50%;
-  outline: 2px solid var(--color-brand-600);
 `;
 
 function UserAvatar() {

@@ -12,6 +12,11 @@ const PageArticle = styled.article`
     margin-top: 10rem;
     margin-bottom: 10rem;
   }
+
+  @media (max-width: 32em) {
+    margin-top: 7rem;
+    margin-bottom: 7rem;
+  }
 `;
 
 export default PageArticle;

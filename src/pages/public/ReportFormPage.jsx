@@ -1,4 +1,4 @@
-import ReportForm from "../../features/reports/ReportForm";
+import CreateReportForm from "../../features/reports/CreateReportForm";
 import PageArticle from "../../ui/PageArticle";
 import HeadingGroup from "../../ui/HeadingGroup";
 
@@ -17,7 +17,7 @@ function ReportFormPage() {
             textCenter
           />
         </div>
-        <ReportForm />
+        <CreateReportForm />
       </div>
     </PageArticle>
   );

@@ -7,7 +7,7 @@ function ReportsPage() {
   return (
     <>
       <Row type="horizontal">
-        <Heading as="h1">All reports</Heading>
+        <Heading as="h1">All Reports</Heading>
         <ReportsTableOperations />
       </Row>
 

@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router";
 import { Link } from "react-scroll";
 import styled, { css } from "styled-components";
@@ -9,6 +9,7 @@ import ButtonLink from "./ButtonLink";
 import { useSubPagesScroll } from "../contexts/SubPagesScrollContext";
 import { aboutNavlinks_data as aboutNavbarLinks } from "../assets/data/data-navlinks";
 import { formNavlinks_data as formNavbarLinks } from "../assets/data/data-navlinks";
+import { HiMenu, HiX } from "react-icons/hi";
 
 const Header = styled.header`
   display: flex;
@@ -56,12 +57,42 @@ const NavBar = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: 81em) {
+    padding: 1.2rem 2rem;
+  }
 `;
 
 const LogoBox = styled.div`
   width: 25rem;
   height: 100%;
   cursor: pointer;
+`;
+
+const MobileNavButton = styled.button`
+  background: none;
+  border: none;
+  border-radius: 50%;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  display: none;
+
+  &:focus {
+    outline: none;
+  }
+
+  & svg {
+    height: 4.5rem;
+    width: 4.5rem;
+    fill: var(--color-brand-700);
+  }
+
+  @media (max-width: 75em) {
+    display: block;
+  }
 `;
 
 const NavList = styled.ul`
@@ -71,6 +102,10 @@ const NavList = styled.ul`
   display: flex;
   align-items: center;
   gap: 1rem;
+
+  @media (max-width: 75em) {
+    display: none;
+  }
 `;
 
 const StyledScrollLink = styled(Link)`
@@ -105,6 +140,7 @@ function NavScrollLink({ linkTo, name, form }) {
 }
 
 function SubNav({ page }) {
+  const [isOpen, setIsOpen] = useState(false);
   const navRef = useRef();
   const navigate = useNavigate();
   const { isScrolled, setIsScrolled } = useSubPagesScroll();
@@ -135,12 +171,21 @@ function SubNav({ page }) {
     [setIsScrolled]
   );
 
+  function handleMobileNav() {
+    setIsOpen((open) => !open);
+  }
+
   return (
     <Header ref={navRef} $scrolled={isScrolled ? "true" : "false"}>
       <NavBar>
         <LogoBox onClick={() => navigate("/home")}>
           <Logo />
         </LogoBox>
+
+        <MobileNavButton onClick={handleMobileNav}>
+          {isOpen ? <HiX /> : <HiMenu />}
+        </MobileNavButton>
+
         <NavList>
           {page.toLowerCase() === "report form" &&
             formNavbarLinks.map((link) => (

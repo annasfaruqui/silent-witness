@@ -3,8 +3,10 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { Toaster } from "react-hot-toast";
 
+// Global styles
 import GlobalStyles from "./styles/GlobalStyles";
 
+// Layouts
 import SubLayout from "./ui/SubLayout";
 import AppLayout from "./ui/AppLayout";
 import ProtectedRoute from "./ui/ProtectedRoute";
@@ -27,7 +29,6 @@ import AccountPage from "./pages/secure/AccountPage";
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
-      // staleTime: 60 * 1000
       staleTime: 0,
     },
   },
