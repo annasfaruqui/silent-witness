@@ -175,7 +175,7 @@ const MobileNavList = styled.ul`
 
 const Overlay = styled.div`
   width: 100%;
-  height: 100dvh;
+  height: 100svh;
 
   overflow: hidden;
 
