@@ -57,6 +57,7 @@ function CreateReportForm() {
     <Form onSubmit={handleSubmit(onSubmit, onError)}>
       {/* Incident details */}
       <FormRowVertical
+        id="incidentDetails-field"
         type="report"
         label="Please give details of the incident you wish to report. Describe everything you know in as much detail as possible."
       >
@@ -76,6 +77,7 @@ function CreateReportForm() {
 
       {/* Incident date */}
       <FormRowVertical
+        id="incidentDate-field"
         type="report"
         label="Date of the incident you are reporting. Please, mention the date you found out about this incident."
       >
@@ -97,6 +99,7 @@ function CreateReportForm() {
 
       {/* Address details */}
       <FormRowVertical
+        id="addressDetails-field"
         type="report"
         label="Where is the drugs trafficking activity taking place? Please give a full address if possible. If you are not sure about the full address, tell us anything else that will help us identify the location of the drugs activity."
       >
@@ -115,6 +118,7 @@ function CreateReportForm() {
 
       {/* Person details */}
       <FormRowVertical
+        id="personDetails-field"
         type="report"
         label="If you are aware of the person(s) involved, please give details of the person(s), including name(s) and description, like the ethnicity, sex, age, rough height or build, hair colour/style, distinguishing features (including facial hair/tattoos)."
       >
@@ -133,6 +137,7 @@ function CreateReportForm() {
 
       {/* Number of Persons */}
       <FormRowVertical
+        id="numPersons-field"
         type="report"
         label="If you are aware of the person(s) involved, please give details of the number of person(s) involved in this case."
       >
@@ -155,6 +160,7 @@ function CreateReportForm() {
 
       {/* Vehicles used */}
       <FormRowVertical
+        id="vehiclesUsed-field"
         type="report"
         label="Give details of any vehicle used. Please tell us everything you know about the vehicle(s) - registration number plate, colour, make, model, etc."
       >
@@ -173,6 +179,7 @@ function CreateReportForm() {
 
       {/* Weapons details */}
       <FormRowVertical
+        id="weaponsDetails-field"
         type="report"
         label="Are there any weapons involved in the incident you are reporting. If yes, please give as much details as you know about the weapons involved."
       >
@@ -191,6 +198,7 @@ function CreateReportForm() {
 
       {/* Further Information */}
       <FormRowVertical
+        id="furtherInformation-field"
         type="report"
         label="Any further information? Is there anything else you would like to add that may assist the investigation of this crime?"
       >
@@ -209,6 +217,7 @@ function CreateReportForm() {
 
       {/* Image */}
       <FormRowVertical
+        id="image-field"
         type="report"
         label="Include supporting images. Attach any relevant photos or visuals to strengthen your report and aid in the investigation"
       >

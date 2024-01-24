@@ -94,6 +94,10 @@ const MobileNav = styled.div`
 
   transition: all 0.3s ease-in;
 
+  @media (max-width: 32em) {
+    width: 85%;
+  }
+
   ${(props) =>
     props.$open === "false" &&
     css`
@@ -129,6 +133,10 @@ const MobileNavList = styled.ul`
     align-items: center;
     justify-content: center;
     gap: 2rem;
+
+    @media (max-width: 32em) {
+      padding: 0 2rem;
+    }
   }
 `;
 
@@ -182,7 +190,7 @@ const MobileNavButton = styled.button`
   & svg {
     height: ${(props) => (props.open ? 0 : "4.5rem")};
     width: ${(props) => (props.open ? 0 : "4.5rem")};
-    fill: ${(props) => (props.open ? "transparent" : "var(--color-brand-700)")};
+    fill: ${(props) => (props.open ? "transparent" : "var(--color-brand-600)")};
   }
 
   @media (max-width: 75em) {

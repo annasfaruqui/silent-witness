@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
 const StyledTestimonial = styled.div`
-  background-color: var(--color-brand-900);
+  background-color: var(--color-brand-100);
   padding: 1rem 2rem;
+  border: 0.5px solid var(--color-brand-600);
   border-radius: var(--border-radius-md);
   box-shadow: var(--shadow-sm);
 
@@ -33,21 +34,24 @@ const Person = styled.div`
 `;
 
 const Author = styled.p`
-  color: var(--color-brand-100);
+  color: var(--color-brand-700);
   font-size: var(--font-md);
+  font-weight: 500;
 `;
 
 const Position = styled.p`
-  color: var(--color-grey-400);
+  color: var(--color-grey-500);
   font-style: italic;
   font-size: var(--font-sm);
+  font-weight: 500;
+  letter-spacing: 0.5px;
 `;
 
 const P = styled.p`
   grid-column: 1/-1;
   align-self: stretch;
 
-  color: var(--color-grey-0);
+  color: var(--color-grey-700);
   font-size: var(--font-md);
   line-height: 1.6;
   hyphens: none;

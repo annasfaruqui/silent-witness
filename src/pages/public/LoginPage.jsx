@@ -14,8 +14,10 @@ const StyledLoginPage = styled.div`
   background-size: cover;
   background-position: center;
 
-  display: grid;
-  grid-template-columns: 2fr 2.5fr;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 50%;
 `;
 
 function LoginPage() {

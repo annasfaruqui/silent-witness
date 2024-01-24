@@ -25,6 +25,10 @@ const StyledMobileLink = styled(Link)`
   cursor: pointer;
   transition: all 0.3s;
 
+  @media (max-width: 32em) {
+    padding: 1rem;
+  }
+
   &:hover,
   &:active {
     color: var(--color-brand-700);

@@ -94,7 +94,7 @@ const GlobalStyles = createGlobalStyle`
 }
 
 *::-webkit-scrollbar-thumb{
-  background-color: var(--color-brand-500);
+  background-color: var(--color-brand-600);
   border-radius: 2.5px;
 }
 
