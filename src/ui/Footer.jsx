@@ -13,7 +13,7 @@ const FooterGrid = styled.div`
   width: 100%;
   max-width: 130rem;
   margin: 0 auto;
-  padding: 9rem 5rem;
+  padding: 12rem 5rem;
   color: var(--color-grey-600);
 
   display: grid;
@@ -43,7 +43,6 @@ const FooterGrid = styled.div`
 `;
 
 const Company = styled.div`
-  /* background-color: green; */
   padding: 0 1rem 2rem;
   display: flex;
   flex-direction: column;
@@ -58,11 +57,14 @@ const Company = styled.div`
   @media (max-width: 44em) {
     padding: 2rem 0;
   }
+
+  @media (max-width: 32em) {
+    gap: 1.2rem;
+  }
 `;
 
 const LogoBox = styled.div`
-  /* background-color: red; */
-  width: 30rem;
+  width: 25rem;
 
   display: flex;
   align-items: center;
@@ -71,7 +73,8 @@ const LogoBox = styled.div`
   cursor: pointer;
 
   @media (max-width: 56em) {
-    width: 25rem;
+    margin-left: -1rem;
+    margin-right: 1rem;
   }
 
   @media (max-width: 44em) {
@@ -80,6 +83,7 @@ const LogoBox = styled.div`
 
   @media (max-width: 32em) {
     width: 30rem;
+    margin-right: 0;
   }
 
   @media (max-width: 21em) {
@@ -115,6 +119,10 @@ const SocialLinks = styled.ul`
       }
     }
   }
+
+  @media (max-width: 56em) {
+    margin: 0rem;
+  }
 `;
 
 const Copyright = styled.p`
@@ -122,11 +130,22 @@ const Copyright = styled.p`
   margin-top: 0.5rem;
   font-size: 1.5rem;
   line-height: 1.5;
+
+  @media (max-width: 56em) {
+    padding: 0;
+    margin: 0;
+  }
 `;
 
 const Address = styled.p`
   font-size: var(--font-md);
   margin-bottom: 2.4rem;
+
+  @media (max-width: 32em) {
+    margin-bottom: 1.2rem;
+    font-weight: 500;
+    color: var(--color-grey-500);
+  }
 `;
 
 const Contact = styled.ul`
@@ -143,12 +162,16 @@ const Contact = styled.ul`
     &:hover {
       color: var(--color-brand-600);
     }
+
+    @media (max-width: 32em) {
+      font-size: 1.4rem;
+      color: var(--color-grey-700);
+      margin-bottom: -2px;
+    }
   }
 `;
 
 const GridContainer = styled.div`
-  /* background-color: yellow; */
-
   padding: 1.2rem 2rem;
 
   display: flex;
@@ -192,6 +215,11 @@ const FooterHeading = styled.h5`
   font-size: 2.2rem;
   font-weight: 500;
   margin-bottom: 4rem;
+
+  @media (max-width: 32em) {
+    margin-bottom: 2rem;
+    font-weight: 700;
+  }
 `;
 
 const FooterList = styled.ul`
