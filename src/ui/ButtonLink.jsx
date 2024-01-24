@@ -19,6 +19,11 @@ const sizes = {
     padding: 1.2rem 2.4rem;
     font-weight: 500;
   `,
+  xl: css`
+    font-size: var(--font-xl);
+    padding: 1.2rem 2.4rem;
+    font-weight: 500;
+  `,
 };
 
 const variations = {

@@ -1,4 +1,3 @@
-import HomeNav from "../../ui/HomeNav";
 import PageArticle from "../../ui/PageArticle";
 import Footer from "../../ui/Footer";
 
@@ -9,12 +8,9 @@ import OperationsSection from "./OperationsSection";
 import FeaturesSection from "./FeaturesSection";
 import FaqsSection from "./FaqsSection";
 
-import { HomeScrollProvider } from "../../contexts/HomeScrollContext";
-
 function HomeLayout() {
   return (
-    <HomeScrollProvider>
-      <HomeNav />
+    <>
       <main>
         <HeroSection />
         <PageArticle>
@@ -26,7 +22,7 @@ function HomeLayout() {
         </PageArticle>
       </main>
       <Footer />
-    </HomeScrollProvider>
+    </>
   );
 }
 

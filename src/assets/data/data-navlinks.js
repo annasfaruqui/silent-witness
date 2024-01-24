@@ -6,21 +6,26 @@ export const homeNavlinks_data = [
   },
   {
     id: 2,
+    name: "About",
+    linkTo: "about",
+  },
+  {
+    id: 3,
     name: "How to report",
     linkTo: "how-to-report",
   },
   {
-    id: 3,
+    id: 4,
     name: "Operations",
     linkTo: "operations",
   },
   {
-    id: 4,
+    id: 5,
     name: "Features",
     linkTo: "features",
   },
   {
-    id: 5,
+    id: 6,
     name: "FAQs",
     linkTo: "faqs",
   },
@@ -49,7 +54,7 @@ export const aboutNavlinks_data = [
   },
 ];
 
-export const formNavlinks_data = [
+export const reportFormNavlinks_data = [
   {
     id: 1,
     name: "Incident",

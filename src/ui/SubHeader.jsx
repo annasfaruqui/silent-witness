@@ -1,8 +1,8 @@
 import { useLocation } from "react-router";
-import styled, { css } from "styled-components";
-import SubNav from "./SubNav";
+import styled from "styled-components";
 
-import { useSubPagesScroll } from "../contexts/SubPagesScrollContext";
+import Navbar from "../features/navigation/Navbar";
+
 import { capitalizeFirstLetter } from "../utils/capitalizer";
 import subHeroImg from "../assets/images/hero-section/sub-hero-image.jpg";
 
@@ -25,18 +25,6 @@ const StyledSubHeader = styled.section`
   @media (max-width: 56em) {
     height: 35rem;
   }
-
-  ${(props) =>
-    props.$scrolled === "false" &&
-    css`
-      position: relative;
-    `}
-
-  ${(props) =>
-    props.$scrolled === "true" &&
-    css`
-      position: static;
-    `}
 `;
 
 const PageInfo = styled.div`
@@ -83,7 +71,6 @@ const PageInfo = styled.div`
 `;
 
 function SubHeader() {
-  const { isScrolled } = useSubPagesScroll();
   const location = useLocation();
   const page = location.pathname
     .slice(1)
@@ -92,8 +79,8 @@ function SubHeader() {
     .join(" ");
 
   return (
-    <StyledSubHeader id="sub-header" $scrolled={isScrolled ? "true" : "false"}>
-      <SubNav page={page} />
+    <StyledSubHeader id="sub-header">
+      <Navbar page={page} />
       <PageInfo>
         <div>
           <h1>{page} Page</h1>

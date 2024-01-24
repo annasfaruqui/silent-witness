@@ -17,7 +17,7 @@ export const reports_data = [
     reportDate: fromToday(-5),
     images: [imageUrl + "sample-img-1.jpg", imageUrl + "sample-img-2.jpg"],
     incidentDetails:
-      "Possible drug sale observed in the alley. Three men were involved in a suspicious transaction.\nTwo of the men were behaving suspiciously near the park entrance. Both individuals appear to be in their 30s, one wearing a black hoodie and the other in a blue jacket, and they were wearing bike helmets, so their faces were not clearly visible. And the third man was a little bit older, like in his 40s, wearing yellow t-shirt anda clinical mask to hide his face.\nThe two helmet wearing men were using a Yamaha Fazer bike, and the other man was on foot(he was not using any vehicles.",
+      "Possible drug sale observed in the alley. Three men were involved in a suspicious transaction.\nTwo of the men were behaving suspiciously near the park entrance. Both individuals appear to be in their 30s, one wearing a black hoodie and the other in a blue jacket, and they were wearing bike helmets, so their faces were not clearly visible. And the third man was a little bit older, like in his 40s, wearing yellow t-shirt and a clinical mask to hide his face.\nThe two helmet wearing men were using a Yamaha Fazer bike, and the other man was on foot(he was not using any vehicles).",
     incidentDate: fromToday(-19),
     addressDetails: "Near 456 Oak Avenue Park, Tailwind road, Bengaluru",
     numPersons: 3,
@@ -28,7 +28,7 @@ export const reports_data = [
     weaponsDetails: "No visible weapons.",
     furtherInformation:
       "Witnessed from a distance. Requesting prompt investigation.",
-    status: "solved",
+    status: "unsolved",
   },
 
   {
@@ -48,7 +48,7 @@ export const reports_data = [
     weaponsDetails: "No visible weapons.",
     furtherInformation:
       "Reported by a concerned citizen. The citizen informed me of drug selling practices taking place in the area. Urgent investigation required. Please monitor the area for any unusual activities.",
-    status: "probing",
+    status: "unsolved",
   },
   {
     id: 3,
@@ -381,7 +381,7 @@ export const reports_data = [
     vehicleDetails: null,
     weaponsDetails: null,
     furtherInformation: null,
-    status: "probing",
+    status: "unsolved",
   },
   {
     id: 22,
@@ -480,7 +480,7 @@ export const reports_data = [
     personDetails:
       "All the individuals are men probably in their early 30s. All of them always have their faces covered with clinical face masks.",
     vehicleDetails: "None observed",
-    weaponsDetails: "One of the men carries a small pocketb knife.",
+    weaponsDetails: "One of the men carries a small pocket knife.",
     furtherInformation:
       "Concerns about suspicious behavior in the lcoal park. Increased security and immediate action requested.",
     status: "solved",
@@ -608,7 +608,7 @@ export const reports_data = [
     created_at: fromToday(-17, true),
     reportDate: fromToday(-17),
     incidentDetails:
-      "In the heart of the city, an unexpected incident transpired during a bustling evening. Witnesses reported a peculiar gathering in an alley behind a local market. A group of individuals, adorned in mysterious attire, engaged in cryptic rituals, exchanging peculiar artifacts. The air was filled with an eerie energy, and passersby couldn't help but feel uneasy. As the group dispersed, leaving behind an enigmatic symbol drawn on the ground, concerns arose about the nature of their activities. The community, disturbed by this unusual occurrence, called for an investigation to unravel the secrets hidden within the city's shadows.",
+      "In the heart of the city, an unexpected incident transpired during a bustling evening. Witnesses reported a peculiar gathering in an alley behind a local market. A group of individuals, adorned in mysterious attire, engaged in cryptic rituals, exchanging peculiar artifacts. The air was filled with an eerie energy, and passersby couldn't help but feel uneasy. As the group dispersed, leaving behind an enigmatic symbol drawn on the ground, concerns arose about the nature of their activities. The community, disturbed by this unusual occurrence, called for an investigation to unravel the secrets hidden within the city's shadows.      ",
     incidentDate: fromToday(-30),
     addressDetails: null,
     numPersons: null,
@@ -617,5 +617,170 @@ export const reports_data = [
     weaponsDetails: null,
     furtherInformation: null,
     status: "unsolved",
+  },
+  {
+    id: 36,
+    created_at: fromToday(-13, true),
+    reportDate: fromToday(-13),
+    incidentDetails:
+      "I was walking my dog in Central Park this evening when I saw a group of teenagers huddled together in a secluded area. They seemed agitated and were passing something small between them. I didn't want to get involved, but I felt it was important to report it. Maybe it was just kids hanging out, but I couldn't shake the feeling that something wasn't right.",
+    incidentDate: fromToday(-29),
+    addressDetails:
+      " Central Park, Shady Grove (hidden area near the willow tree grove)",
+    numPersons: 2,
+    personDetails:
+      "Jason Wilson with age in his 20s and Sarah Hernandez with age 18, known gang member with several drug-related arrests.",
+    vehicleDetails: null,
+    weaponsDetails: null,
+    furtherInformation:
+      "One of the teenager was my neighbours son who studies as Joseph Stalin High School ",
+    status: "solved",
+  },
+  {
+    id: 37,
+    created_at: fromToday(-27, true),
+    reportDate: fromToday(-27),
+    incidentDetails:
+      "For the past few weeks, there's been a strong chemical smell coming from the apartment below me. It's especially bad at night, and I'm worried about what they could be making down there. I've tried talking to my landlord, but they haven't done anything about it. I'm concerned that it might be a drug operation, and I don't know what to do.",
+    incidentDate: fromToday(-29),
+    addressDetails: "123 Elm Street, Apartment 2B",
+    numPersons: 1,
+    personDetails:
+      "Dr. Edward Vance, 40s, seemingly respectable chemist with a gambling addiction and possible ties to illegal drug production.",
+    vehicleDetails: null,
+    weaponsDetails: null,
+    furtherInformation: null,
+    status: "probing",
+  },
+  {
+    id: 38,
+    created_at: fromToday(-7, true),
+    reportDate: fromToday(-7),
+    incidentDetails:
+      "There's been a recent surge in robberies and vandalism in my neighborhood. I've lived here for 20 years, and I've never seen anything like it. I'm worried it's connected to the growing drug trade around the corner store on Elm Street. I've seen suspicious people coming and going at all hours of the night.",
+    incidentDate: fromToday(-20),
+    addressDetails: "Elm Street and Maple Avenue intersection",
+    numPersons: 1,
+    personDetails:
+      "Big Tony Salieri, 50s, local crime boss with a network of street dealers and known for exploiting vulnerable individuals.",
+    vehicleDetails:
+      "Souped-up motorcycle with loud exhaust and graffiti markings; frequented by known troublemakers and used for swift escapes.",
+    weaponsDetails: null,
+    furtherInformation:
+      "This is a drug peddling organisation under the drug lord name Big tony Salieri",
+    status: "unsolved",
+  },
+  {
+    id: 39,
+    created_at: fromToday(-8, true),
+    reportDate: fromToday(-8),
+    incidentDetails:
+      "I see this young woman at the bus stop every morning. She always looks exhausted and scared, and she's constantly fidgeting with her hands. I overheard her talking on the phone once, and she mentioned owing someone a lot of money. I'm worried she's being forced to sell drugs to pay off a debt. I wish I knew how to help her.",
+    incidentDate: fromToday(-12),
+    addressDetails: " Main Street bus stop near the old movie theater ",
+    numPersons: 1,
+    personDetails:
+      "Marco Santos, 30s, suspected manipulative drug dealer with maybe financial struggles",
+    vehicleDetails: null,
+    weaponsDetails: null,
+    furtherInformation: null,
+    status: "solved",
+  },
+  {
+    id: 40,
+    created_at: fromToday(-17, true),
+    reportDate: fromToday(-17),
+    incidentDetails:
+      "Near 234 Marina Street in Chennai, I witnessed strange transactions involving a yellow auto-rickshaw (TN-02-IJ-6789). Individuals were exchanging packages near a small shop, indicating possible drug trafficking",
+    incidentDate: fromToday(-21),
+    addressDetails: "234 Marin Street in chennai",
+    numPersons: 2,
+    personDetails: null,
+    vehicleDetails: "yellow auto-rickshaw (TN-02-IJ-6789)",
+    weaponsDetails: null,
+    furtherInformation:
+      "Two black males have been seen exchanging parcel or packets on several occations involing the same black males at a suspicious time of the day",
+    status: "probing",
+  },
+  {
+    id: 41,
+    created_at: fromToday(-18, true),
+    reportDate: fromToday(-18),
+    incidentDetails:
+      "I witnessed a drug deal happening in the alley behind my apartment building. I didn't get a good look at the people involved, but I could tell it was something illegal. I'm reporting it anonymously because I don't want to get involved, but I thought it was important to let someone know.",
+    incidentDate: fromToday(-20),
+    addressDetails: "Alleyway behind Joe's Pizza on 1st Avenue ",
+    numPersons: null,
+    personDetails: null,
+    vehicleDetails:
+      " Unmarked delivery truck parked in a secluded alley, potentially used for covert deliveries or pickups.",
+    weaponsDetails: "One of the men carries a small pocket knife.",
+    furtherInformation: null,
+    status: "probing",
+  },
+  {
+    id: 42,
+    created_at: fromToday(-6, true),
+    reportDate: fromToday(-6),
+    incidentDetails:
+      "My neighbor's son used to be such a bright and outgoing kid, but lately he's been hanging out with a bad crowd. I see him coming and going from their house at all hours of the night. I'm worried he's gotten involved with drugs, and I want to help. I don't know his parents very well, but I think I should report my concerns to the police.",
+    incidentDate: fromToday(-22),
+    addressDetails:
+      "789 Willow Creek Drive, friendly cul-de-sac with well-kept lawns ",
+    numPersons: 1,
+    personDetails: "Joseph, 16 he is the youngest one of the family",
+    vehicleDetails: null,
+    weaponsDetails: null,
+    furtherInformation:
+      "The teenager's older brother, possibly involved in drug use or dealing and influencing his younger sibling.",
+    status: "solved",
+  },
+  {
+    id: 43,
+    created_at: fromToday(-16, true),
+    reportDate: fromToday(-16),
+    incidentDetails:
+      "At a secluded farmhouse located at 567 Green Retreat, Pune, I noticed suspicious gatherings. Individuals in a grey sedan with the license plate MH-12-KL-2345 were frequently seen entering the premises, suggesting potential illegal activities.",
+    incidentDate: fromToday(-26),
+    addressDetails: "567 Green Retreat, Pune",
+    numPersons: 6,
+    personDetails: null,
+    vehicleDetails: "grey sedan with the license plate MH-12-KL-2345",
+    weaponsDetails: "One of the female was seen with a machete",
+    furtherInformation: null,
+    status: "probing",
+  },
+  {
+    id: 44,
+    created_at: fromToday(-5, true),
+    reportDate: fromToday(-5),
+    incidentDetails:
+      "At a popular nightclub on 101 Starlight Street, Chandigarh, I noticed a network of individuals engaging in discreet activities. A white SUV with the license plate CH-01-ST-5678 was frequently parked nearby, suggesting a possible connection to drug trafficking.",
+    incidentDate: fromToday(-11),
+    addressDetails: "101 Starlight Street, Chandigarh",
+    numPersons: 12,
+    personDetails: null,
+    vehicleDetails: "white SUV with the license plate CH-01-ST-5678",
+    weaponsDetails: "Handguns",
+    furtherInformation: "They usually gather on the odd days of the week ",
+    status: "unsolved",
+  },
+  {
+    id: 45,
+    created_at: fromToday(-9, true),
+    reportDate: fromToday(-9),
+    incidentDetails:
+      "Along the coastal area in Goa, I observed a suspicious boat with the name Sea Shadow. It was frequently anchored near 101 Waterfront Drive, with individuals transferring packages between the boat and a white SUV (GA-01-GH-3456).",
+    incidentDate: fromToday(-11),
+    addressDetails: " 101 Waterfront Drive,Goa",
+    numPersons: 20,
+    personDetails:
+      "There are many but usually there is one guy who can be seen often times it could be there boss named as Silva Uchiha who is in his 40s",
+    vehicleDetails: "A boat and a white SUV (GA-01-GH-3456)",
+    weaponsDetails:
+      "There are men who usually carry machete but some can also be seen carrying handguns",
+    furtherInformation:
+      "The men found at the location usually are not  locals but they are from other parts of the country",
+    status: "solved",
   },
 ];

@@ -4,11 +4,9 @@ import SubHeader from "./SubHeader";
 import Container from "./Container";
 import Footer from "./Footer";
 
-import { SubPagesScrollProvider } from "../contexts/SubPagesScrollContext";
-
 function SubLayout() {
   return (
-    <SubPagesScrollProvider>
+    <>
       <SubHeader />
       <main>
         <Container>
@@ -16,7 +14,7 @@ function SubLayout() {
         </Container>
       </main>
       <Footer />
-    </SubPagesScrollProvider>
+    </>
   );
 }
 

@@ -7,9 +7,10 @@ import { Toaster } from "react-hot-toast";
 import GlobalStyles from "./styles/GlobalStyles";
 
 // Layouts
+import PublicPagesLayout from "./ui/PublicPagesLayout";
 import SubLayout from "./ui/SubLayout";
-import AppLayout from "./ui/AppLayout";
 import ProtectedRoute from "./ui/ProtectedRoute";
+import AppLayout from "./ui/AppLayout";
 
 // Public Pages
 import HomePage from "./pages/public/HomePage";
@@ -41,13 +42,15 @@ function App() {
       <GlobalStyles />
       <BrowserRouter>
         <Routes>
-          <Route index element={<Navigate replace to="/home" />} />
-          <Route path="/home" element={<HomePage />} />
-          <Route path="/login" element={<LoginPage />} />
+          <Route element={<PublicPagesLayout />}>
+            <Route index element={<Navigate replace to="/home" />} />
+            <Route path="/home" element={<HomePage />} />
+            <Route path="/login" element={<LoginPage />} />
 
-          <Route element={<SubLayout />}>
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/report-form" element={<ReportFormPage />} />
+            <Route element={<SubLayout />}>
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/report-form" element={<ReportFormPage />} />
+            </Route>
           </Route>
 
           <Route

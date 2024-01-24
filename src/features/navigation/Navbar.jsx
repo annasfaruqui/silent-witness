@@ -1,15 +1,14 @@
 import { useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import { useNavigate } from "react-router";
 import styled, { css } from "styled-components";
-import { Link } from "react-scroll";
 import { HiMenu, HiX } from "react-icons/hi";
 
-import Logo from "./Logo";
-import ButtonLink from "./ButtonLink";
+import NavLink from "./NavLink";
+import Logo from "../../ui/Logo";
+import ButtonLink from "../../ui/ButtonLink";
 
-import { useHomeScroll } from "../contexts/HomeScrollContext";
-import { homeNavlinks_data as homeNavbarLinks } from "../assets/data/data-navlinks";
-import { createPortal } from "react-dom";
+import { useNavValues } from "./useNavValues";
 
 const Header = styled.header`
   display: flex;
@@ -28,20 +27,20 @@ const Header = styled.header`
       left: 0;
       background-color: rgba(255, 255, 255, 0.9);
       z-index: 20;
-      /* box-shadow: var(--shadow-md); */
+      box-shadow: var(--shadow-md);
     `}
 
   ${(props) =>
     props.$scrolled === "false" &&
     css`
-      background-color: var(--color-brand-100);
+      background-color: transparent;
       height: 10rem;
       padding: 1rem 0;
       position: relative;
     `}
 `;
 
-const NavBar = styled.nav`
+const StyledNavbar = styled.nav`
   width: 100%;
   max-width: 150rem;
   margin: 0 auto;
@@ -77,6 +76,92 @@ const NavList = styled.ul`
   @media (max-width: 75em) {
     display: none;
   }
+`;
+
+const MobileNav = styled.div`
+  position: relative;
+
+  background-color: rgba(255, 255, 255, 0.9);
+
+  height: 100dvh;
+  width: 70%;
+  z-index: 30;
+  margin-left: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.3s ease-in;
+
+  ${(props) =>
+    props.$open === "false" &&
+    css`
+      opacity: 0;
+      pointer-events: none;
+      visibility: hidden;
+
+      transform: translateX(100%);
+    `}
+
+  ${(props) =>
+    props.$open === "true" &&
+    css`
+      opacity: 1;
+      pointer-events: auto;
+      visibility: visible;
+
+      transform: translateX(0);
+    `}
+`;
+
+const MobileNavList = styled.ul`
+  display: none;
+
+  @media (max-width: 75em) {
+    height: 100%;
+    padding: 0 4rem;
+    width: 100%;
+    z-index: 30;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+`;
+
+const Overlay = styled.div`
+  width: 100%;
+  height: 100dvh;
+
+  overflow: hidden;
+
+  background-color: var(--backdrop-color);
+  backdrop-filter: blur(4px);
+  z-index: 25;
+  transition: all 0.5s;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  ${(props) =>
+    props.$open === "false" &&
+    css`
+      opacity: 0;
+      pointer-events: none;
+      visibility: hidden;
+    `}
+
+  ${(props) =>
+    props.$open === "true" &&
+    css`
+      opacity: 1;
+      pointer-events: auto;
+      visibility: visible;
+    `}
 `;
 
 const MobileNavButton = styled.button`
@@ -121,126 +206,17 @@ const MobileNavCloseButton = styled(MobileNavButton)`
   }
 `;
 
-const MobileNav = styled.div`
-  position: relative;
-
-  background-color: rgba(255, 255, 255, 0.95);
-
-  height: 100svh;
-  width: 70%;
-  z-index: 30;
-  margin-left: auto;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  transition: all 0.3s ease-in;
-
-  ${(props) =>
-    props.$open === "false" &&
-    css`
-      opacity: 0;
-      pointer-events: none;
-      visibility: hidden;
-
-      transform: translateX(100%);
-    `}
-
-  ${(props) =>
-    props.$open === "true" &&
-    css`
-      opacity: 1;
-      pointer-events: auto;
-      visibility: visible;
-
-      transform: translateX(0);
-    `}
-`;
-
-const MobileNavList = styled.ul`
-  display: none;
-
-  @media (max-width: 75em) {
-    height: 100%;
-    padding: 0 4rem;
-    width: 100%;
-    z-index: 30;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-`;
-
-const Overlay = styled.div`
-  width: 100%;
-  height: 100svh;
-
-  overflow: hidden;
-
-  background-color: var(--backdrop-color);
-  backdrop-filter: blur(4px);
-  z-index: 25;
-  transition: all 0.5s;
-
-  position: fixed;
-  top: 0;
-  left: 0;
-
-  ${(props) =>
-    props.$open === "false" &&
-    css`
-      opacity: 0;
-      pointer-events: none;
-      visibility: hidden;
-    `}
-
-  ${(props) =>
-    props.$open === "true" &&
-    css`
-      opacity: 1;
-      pointer-events: auto;
-      visibility: visible;
-    `}
-`;
-
-const StyledLink = styled(Link)`
-  color: var(--color-grey-800);
-  font-size: 2rem;
-  font-weight: 600;
-  padding: 1rem 1.2rem;
-  cursor: pointer;
-  transition: all 0.3s;
-
-  &:hover,
-  &:active {
-    color: var(--color-brand-700);
-    border-radius: var(--border-radius-sm);
-  }
-`;
-
-function NavLink({ linkTo, name }) {
-  return (
-    <li>
-      <StyledLink
-        to={linkTo}
-        spy={true}
-        smooth={true}
-        offset={-120}
-        duration={500}
-      >
-        {name}
-      </StyledLink>
-    </li>
-  );
-}
-
-function HomeNav() {
+function Navbar({ page }) {
+  const pageLowerCase = page.toLowerCase();
   const navRef = useRef();
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
-  const { isScrolled, setIsScrolled } = useHomeScroll();
+  const { navbarLinks, isScrolled, setIsScrolled } =
+    useNavValues(pageLowerCase);
+
+  function handleMobileNav() {
+    setIsOpen((open) => !open);
+  }
 
   useEffect(
     function () {
@@ -263,18 +239,18 @@ function HomeNav() {
           rootMargin: "-100px",
         }
       );
-      observer.observe(document.getElementById("hero"));
+      observer.observe(
+        document.getElementById(
+          `${pageLowerCase === "home" ? "hero" : "sub-header"}`
+        )
+      );
     },
-    [setIsScrolled]
+    [setIsScrolled, pageLowerCase]
   );
-
-  function handleMobileNav() {
-    setIsOpen((open) => !open);
-  }
 
   return (
     <Header ref={navRef} $scrolled={isScrolled ? "true" : "false"}>
-      <NavBar>
+      <StyledNavbar>
         <LogoBox onClick={() => navigate("/home", { replace: true })}>
           <Logo />
         </LogoBox>
@@ -290,11 +266,40 @@ function HomeNav() {
                 {isOpen ? <HiX /> : <HiMenu />}
               </MobileNavCloseButton>
               <MobileNavList>
-                <li>Home</li>
-                <li>How to report</li>
-                <li>Operations</li>
-                <li>Features</li>
-                <li>FAQs</li>
+                {navbarLinks.map((link) => (
+                  <NavLink
+                    page={pageLowerCase}
+                    handleClick={handleMobileNav}
+                    open={isOpen}
+                    linkTo={link.linkTo}
+                    name={link.name}
+                    key={link.id}
+                  />
+                ))}
+                {(pageLowerCase === "home" || pageLowerCase === "about") && (
+                  <li style={{ marginTop: "1.6rem" }}>
+                    <ButtonLink
+                      onClick={handleMobileNav}
+                      to="/report-form"
+                      size="xl"
+                      variation="primary"
+                    >
+                      Report Now
+                    </ButtonLink>
+                  </li>
+                )}
+                {pageLowerCase === "report form" && (
+                  <li style={{ marginTop: "1.6rem" }}>
+                    <ButtonLink
+                      onClick={handleMobileNav}
+                      to="/home"
+                      size="xl"
+                      variation="primary"
+                    >
+                      Back to Home
+                    </ButtonLink>
+                  </li>
+                )}
               </MobileNavList>
             </MobileNav>
           </Overlay>,
@@ -302,18 +307,30 @@ function HomeNav() {
         )}
 
         <NavList>
-          {homeNavbarLinks.map((link) => (
-            <NavLink linkTo={link.linkTo} name={link.name} key={link.id} />
+          {navbarLinks.map((link) => (
+            <NavLink
+              page={pageLowerCase}
+              linkTo={link.linkTo}
+              name={link.name}
+              key={link.id}
+            />
           ))}
           <li>
-            <ButtonLink to="/login" size="large" variation="primary">
-              Authorized Login
-            </ButtonLink>
+            {pageLowerCase === "home" && (
+              <ButtonLink to="/login" size="large" variation="primary">
+                Authorized Login
+              </ButtonLink>
+            )}
+            {pageLowerCase === "about" && (
+              <ButtonLink to="/report-form" size="large" variation="primary">
+                Report Now
+              </ButtonLink>
+            )}
           </li>
         </NavList>
-      </NavBar>
+      </StyledNavbar>
     </Header>
   );
 }
 
-export default HomeNav;
+export default Navbar;

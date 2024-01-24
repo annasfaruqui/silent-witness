@@ -15,50 +15,53 @@ const TestimonialsGrid = styled.div`
 `;
 
 const JoinUs = styled.div`
+  margin: 0 5px;
   margin-top: 6rem;
+  padding: 4rem 4.2rem;
+  background-color: var(--color-brand-100);
+  border: 1px solid var(--color-brand-600);
+  border-radius: var(--border-radius-lg);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: 1rem;
 
+  @media (max-width: 56em) {
+    padding: 3rem 3.6rem;
+  }
+
+  @media (max-width: 32em) {
+    padding: 3rem 3.6rem;
+  }
+
   & h5 {
-    font-size: var(--font-3xl);
+    font-size: 4.5rem;
     font-weight: 800;
     color: var(--color-brand-600);
-    text-transform: uppercase;
-    text-align: center;
-    word-spacing: 1.6rem;
+    text-transform: capitalize;
+    word-spacing: 0.5rem;
+
+    @media (max-width: 75em) {
+      font-size: 4rem;
+    }
+
+    @media (max-width: 56em) {
+      font-size: 3.5rem;
+    }
+
+    @media (max-width: 32em) {
+      font-size: 3rem;
+      font-weight: 700;
+      text-align: left;
+    }
   }
 
   & p {
     font-size: var(--font-lg);
-    font-weight: 600;
-    text-align: center;
-    line-height: 1.5;
+    line-height: 1.6;
     hyphens: none;
     margin-bottom: 2rem;
-  }
-
-  @media (max-width: 75em) {
-    & h5 {
-      font-size: 4rem;
-      word-spacing: 1.4rem;
-    }
-  }
-
-  @media (max-width: 32em) {
-    align-items: flex-start;
-
-    & h5 {
-      font-size: 3rem;
-      font-weight: 700;
-      text-align: left;
-      word-spacing: 1rem;
-    }
-
-    & p {
-      text-align: justify;
-    }
+    font-weight: 500;
   }
 `;
 
@@ -103,15 +106,12 @@ function CommunityImpact() {
         <p>
           Every report, every voice, and every act of advocacy contribute to the
           positive impact we aim to achieve. Together, let's continue making a
-          difference in the fight against illegal drug trafficking.
-        </p>
-        <p>
-          If you have any knowledge regarding any drug trafficking activity
-          taking place in your surroundings, like somewhere around your
-          workplace, or in your neighbourhood, or any place you frequently go to
-          or pass by, Please take a stand for a drug-free land, and report that
-          case on our platform without any fear of your identity being revealed
-          to anyone.
+          difference in the fight against illegal drug trafficking. If you have
+          any knowledge regarding any drug trafficking activity taking place in
+          your surroundings, like somewhere around your workplace, or in your
+          neighbourhood, or any place you frequently go to or pass by, Please
+          take a stand for a drug-free land, and report that case on our
+          platform without any fear of your identity being revealed to anyone.
         </p>
         <ButtonLink to="/report-form" size="large">
           Report Now

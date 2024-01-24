@@ -5,17 +5,17 @@ import { HiArrowDown } from "react-icons/hi2";
 import ButtonLink from "../../ui/ButtonLink";
 
 import heroImg from "../../assets/images/hero-section/hero-image.png";
-import { useHomeScroll } from "../../contexts/HomeScrollContext";
+import Navbar from "../navigation/Navbar";
+import { useHomePageScroll } from "../../contexts/HomePageScrollContext";
 
 const StyledHeroSection = styled.section`
-  padding-top: 5rem;
   padding-bottom: 6rem;
   background-color: var(--color-brand-100);
 
   ${(props) =>
-    props.$scrolled === true &&
+    props.$scrolled === "true" &&
     css`
-      margin-top: 10rem;
+      padding-top: 10rem;
     `}
 `;
 
@@ -24,6 +24,7 @@ const Box = styled.div`
   width: 100%;
   max-width: 150rem;
   margin: 0 auto;
+  margin-top: 5rem;
   padding: 0 5rem;
 
   display: grid;
@@ -31,11 +32,6 @@ const Box = styled.div`
   align-items: center;
   justify-content: center;
   gap: 4rem;
-
-  @media (max-width: 81em) {
-    /* max-width: 140rem; */
-    padding: 0 10rem;
-  }
 
   @media (max-width: 75em) {
     display: flex;
@@ -106,6 +102,10 @@ const TextBox = styled.div`
       font-size: 2rem;
     }
 
+    @media (max-width: 81em) {
+      font-size: 1.8rem;
+    }
+
     @media (max-width: 75em) {
       font-size: 2.2rem;
     }
@@ -173,10 +173,11 @@ const StyledButtonWithArrowLink = styled(Link)`
 `;
 
 function HeroSection() {
-  const { isScrolled } = useHomeScroll();
+  const { isScrolled } = useHomePageScroll();
 
   return (
-    <StyledHeroSection id="hero" $scrolled={isScrolled}>
+    <StyledHeroSection id="hero" $scrolled={isScrolled ? "true" : "false"}>
+      <Navbar page="home" />
       <Box>
         <TextBox>
           <h1>
