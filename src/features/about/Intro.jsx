@@ -8,7 +8,7 @@ function Intro() {
         heading="About us"
         subHeading="Discover our purpose to community safety through anonymous reporting."
       />
-      <Introduction marginBottom="0">
+      <Introduction $mb="0">
         We are a dedicated team committed to fostering safer and more resilient
         communities. Recognizing the urgent need to combat the menace of illegal
         drug trafficking, We have built a secure and confidential platform

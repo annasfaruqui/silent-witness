@@ -16,7 +16,7 @@ const FilterButton = styled.button`
   border: none;
 
   ${(props) =>
-    props.active &&
+    props.$active &&
     css`
       background-color: var(--color-brand-600);
       color: var(--color-grey-50);
@@ -55,7 +55,7 @@ function Filter({ filterField, options }) {
           onClick={() => handleClick(option.value)}
           // a ternary operator has been added here because the browser is treating the active prop as a non-boolean prop, even though it actually needs to be a boolean
           disabled={option.value === currentFilter}
-          active={option.value === currentFilter ? 1 : 0}
+          $active={option.value === currentFilter ? 1 : 0}
         >
           {option.label}
         </FilterButton>

@@ -190,7 +190,7 @@ function HeroSection() {
             environment.
           </h2>
           <ButtonBox>
-            <ButtonLink to="/report-form" variation="primary" size="large">
+            <ButtonLink to="/report-form" $variation="primary" size="large">
               Report a Crime
             </ButtonLink>
             <StyledButtonWithArrowLink

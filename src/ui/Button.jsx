@@ -53,17 +53,17 @@ const Button = styled.button`
   border-radius: var(--border-radius-sm);
   box-shadow: var(--shadow-sm);
   ${(props) =>
-    props.grow === "true" &&
+    props.$grow === "true" &&
     css`
       flex-grow: 1;
     `}
 
   ${(props) => sizes[props.size]}
-  ${(props) => variations[props.variation]}
+  ${(props) => variations[props.$variation]}
 `;
 
 Button.defaultProps = {
-  variation: "primary",
+  $variation: "primary",
   size: "medium",
 };
 

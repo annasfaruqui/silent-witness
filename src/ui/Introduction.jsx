@@ -6,13 +6,13 @@ const Introduction = styled.p`
   line-height: 1.8;
   color: ${(props) => (props.color ? props.color : "var(--color-grey-700)")};
 
-  margin-top: ${(props) => props.marginTop}rem;
-  margin-bottom: ${(props) => props.marginBottom}rem;
+  margin-top: ${(props) => props.$mt}rem;
+  margin-bottom: ${(props) => props.$mb}rem;
 `;
 
 Introduction.defaultProps = {
-  marginTop: 3,
-  marginBottom: 3,
+  $mt: 3,
+  $mb: 3,
 };
 
 export default Introduction;

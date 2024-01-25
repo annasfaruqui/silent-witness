@@ -83,7 +83,7 @@ const MobileNav = styled.div`
 
   background-color: rgba(255, 255, 255, 0.9);
 
-  height: 100dvh;
+  height: 100vh;
   width: 70%;
   z-index: 30;
   margin-left: auto;
@@ -142,7 +142,7 @@ const MobileNavList = styled.ul`
 
 const Overlay = styled.div`
   width: 100%;
-  height: 100dvh;
+  height: 100vh;
 
   overflow: hidden;
 
@@ -290,7 +290,7 @@ function Navbar({ page }) {
                       onClick={handleMobileNav}
                       to="/report-form"
                       size="xl"
-                      variation="primary"
+                      $variation="primary"
                     >
                       Report Now
                     </ButtonLink>
@@ -302,7 +302,7 @@ function Navbar({ page }) {
                       onClick={handleMobileNav}
                       to="/home"
                       size="xl"
-                      variation="primary"
+                      $variation="primary"
                     >
                       Back to Home
                     </ButtonLink>
@@ -325,12 +325,12 @@ function Navbar({ page }) {
           ))}
           <li>
             {pageLowerCase === "home" && (
-              <ButtonLink to="/login" size="large" variation="primary">
+              <ButtonLink to="/login" size="large" $variation="primary">
                 Authorized Login
               </ButtonLink>
             )}
             {pageLowerCase === "about" && (
-              <ButtonLink to="/report-form" size="large" variation="primary">
+              <ButtonLink to="/report-form" size="large" $variation="primary">
                 Report Now
               </ButtonLink>
             )}

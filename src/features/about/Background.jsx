@@ -96,7 +96,7 @@ function Background() {
         subHeading="Our insiparations and journey"
       />
       <Grid>
-        <Introduction marginTop="0" marginBottom="0">
+        <Introduction $mt="0" $mb="0">
           At Silent Witness, our journey is rooted in a commitment to making a
           meaningful impact on the safety and well-being of our communities. Our
           story began with a shared concern for the rising challenges posed by
@@ -107,7 +107,7 @@ function Background() {
         </Introduction>
         <Genesis>
           <Heading as="h5">Genesis</Heading>
-          <Introduction marginTop="0" marginBottom="0">
+          <Introduction $mt="0" $mb="0">
             Driven by a passion for community welfare, we came together with a
             vision &mdash; To create a platform that empowers individuals to
             anonymously report incidents of drug trafficking. This vision stems

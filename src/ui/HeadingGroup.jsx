@@ -6,7 +6,7 @@ const StyledHeadingGroup = styled.hgroup`
   gap: 1rem;
 
   ${(props) =>
-    props.center === "true" &&
+    props.$center === "true" &&
     css`
       text-align: center;
     `}
@@ -43,7 +43,7 @@ const StyledHeadingGroup = styled.hgroup`
 
 function HeadingGroup({ heading, subHeading, textCenter }) {
   return (
-    <StyledHeadingGroup center={textCenter ? "true" : "false"}>
+    <StyledHeadingGroup $center={textCenter ? "true" : "false"}>
       <h3>{heading}</h3>
       <h4>{subHeading}</h4>
     </StyledHeadingGroup>

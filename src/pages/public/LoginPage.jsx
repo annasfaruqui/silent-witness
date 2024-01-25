@@ -4,7 +4,7 @@ import bgImg from "../../assets/images/login-page/bg-image.jpg";
 import LoginLayout from "../../features/authentication/LoginLayout";
 
 const StyledLoginPage = styled.div`
-  height: 100dvh;
+  height: 100vh;
   background-image: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0.55),
@@ -13,6 +13,7 @@ const StyledLoginPage = styled.div`
     url(${bgImg});
   background-size: cover;
   background-position: center;
+  overflow: hidden;
 
   display: flex;
   align-items: center;

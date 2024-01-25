@@ -95,7 +95,7 @@ function AboutSection() {
         <ButtonWithArrowLink
           to="/about"
           gap="1"
-          variation="primary"
+          $variation="primary"
           size="large"
         >
           Learn More

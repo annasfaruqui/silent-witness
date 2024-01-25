@@ -57,15 +57,15 @@ function LoginForm() {
 
       <FormRowVertical>
         <ButtonGroup>
-          <Button grow="true" size="large" disabled={isLoggingIn}>
+          <Button $grow="true" size="large" disabled={isLoggingIn}>
             {!isLoggingIn ? "Login" : <SpinnerMini />}
           </Button>
           <Button
-            grow="true"
+            $grow="true"
             onClick={() => navigate(-1, { replace: true })}
             type="reset"
             size="large"
-            variation="secondary"
+            $variation="secondary"
             disabled={isLoggingIn}
           >
             Cancel

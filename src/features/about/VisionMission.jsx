@@ -29,7 +29,7 @@ const StyledStatement = styled.div`
   }
 
   ${(props) =>
-    props.icon === "true" &&
+    props.$icon === "true" &&
     css`
       grid-template-columns: 5rem 1fr;
       gap: 2rem;
@@ -95,7 +95,7 @@ const SmallHeading = styled.h5`
 
 function Statement({ statement }) {
   return (
-    <StyledStatement icon={statement.icon ? "true" : "false"}>
+    <StyledStatement $icon={statement.icon ? "true" : "false"}>
       {statement.icon && (
         <span>
           <statement.icon />

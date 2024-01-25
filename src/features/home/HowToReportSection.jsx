@@ -117,14 +117,14 @@ function HowToReportSection() {
           to="/report-form"
           gap="1"
           size="large"
-          variation="primary"
+          $variation="primary"
         >
           Go to Report Form
           <span>
             <HiArrowRight />
           </span>
         </ButtonWithArrowLink>
-        <Introduction marginBottom="0">
+        <Introduction $$mb="0">
           Your vigilance and commitment to community safety are invaluable. By
           reporting illegal drug trafficking activities, you play a pivotal role
           in fostering a secure environment for everyone. Your commitment to

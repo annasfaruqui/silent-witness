@@ -14,6 +14,7 @@ const FooterGrid = styled.div`
   max-width: 130rem;
   margin: 0 auto;
   padding: 12rem 5rem;
+  padding-bottom: 15rem;
   color: var(--color-grey-600);
 
   display: grid;
@@ -166,7 +167,6 @@ const Contact = styled.ul`
     @media (max-width: 32em) {
       font-size: 1.4rem;
       color: var(--color-grey-700);
-      margin-bottom: -2px;
     }
   }
 `;

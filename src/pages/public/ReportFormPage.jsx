@@ -14,7 +14,7 @@ function ReportFormPage() {
           <HeadingGroup
             heading="Report form"
             subHeading="Submit detailed information to report an incident effectively and securely"
-            textCenter
+            textCenter={true}
           />
         </div>
         <CreateReportForm />

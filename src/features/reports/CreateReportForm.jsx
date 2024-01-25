@@ -306,7 +306,7 @@ function CreateReportForm() {
       {/* Action Buttons */}
       <FormRowVertical>
         <FormRow>
-          <Button disabled={isCreating} variation="secondary" type="reset">
+          <Button disabled={isCreating} $variation="secondary" type="reset">
             Cancel
           </Button>
           <Button disabled={isCreating}>Submit Report</Button>

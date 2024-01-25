@@ -44,7 +44,7 @@ function Report() {
           <Heading as="h1">Report #{reportId}</Heading>
           <Tag type={statusToTagColor[status]}>{status}</Tag>
         </HeadingBox>
-        <ButtonWithArrow onClick={moveBack} gap="1" variation="secondary">
+        <ButtonWithArrow onClick={moveBack} gap="1" $variation="secondary">
           <span>
             <HiArrowLeft />
           </span>
@@ -73,16 +73,16 @@ function Report() {
           {(status === "probing" || status === "unsolved") && (
             <>
               <Modal.Open opens="unrelated">
-                <Button variation="secondary">Mark as unrelated report</Button>
+                <Button $variation="secondary">Mark as unrelated report</Button>
               </Modal.Open>
               <Modal.Open opens="false">
-                <Button variation="danger">Mark as false report</Button>
+                <Button $variation="danger">Mark as false report</Button>
               </Modal.Open>
             </>
           )}
 
           <Modal.Open opens="delete">
-            <Button variation="danger">Delete report</Button>
+            <Button $variation="danger">Delete report</Button>
           </Modal.Open>
 
           <>
@@ -157,7 +157,7 @@ function Report() {
           </>
         </Modal>
 
-        <Button variation="secondary" onClick={moveBack}>
+        <Button $variation="secondary" onClick={moveBack}>
           Back
         </Button>
       </ButtonGroup>

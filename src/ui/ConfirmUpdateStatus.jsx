@@ -46,14 +46,14 @@ function ConfirmUpdateStatus({
 
       <div>
         <Button
-          variation="secondary"
+          $variation="secondary"
           disabled={disabled}
           onClick={onCloseModal}
         >
           Cancel
         </Button>
         <Button
-          variation={type === "danger" ? "danger" : "primary"}
+          $variation={type === "danger" ? "danger" : "primary"}
           disabled={disabled}
           onClick={handleClick}
         >

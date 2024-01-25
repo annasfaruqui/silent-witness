@@ -37,13 +37,13 @@ function ConfirmLogout({ onCloseModal, disabled, onConfirm }) {
 
       <div>
         <Button
-          variation="secondary"
+          $variation="secondary"
           disabled={disabled}
           onClick={onCloseModal}
         >
           Cancel
         </Button>
-        <Button variation="danger" disabled={disabled} onClick={onConfirm}>
+        <Button $variation="danger" disabled={disabled} onClick={onConfirm}>
           {disabled ? <SpinnerMini danger="true" /> : "Logout"}
         </Button>
       </div>
