@@ -18,6 +18,10 @@ const InnerDiv = styled.div`
 
   align-items: center;
 
+  @media (max-width: 32em) {
+    padding: 1.6rem 1rem 3rem;
+  }
+
   & h6 {
     font-size: 1.7rem;
     font-weight: 800;
@@ -32,6 +36,10 @@ const Member = styled.div`
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
+
+  @media (max-width: 32em) {
+    gap: 1rem;
+  }
 
   & p {
     font-size: var(--font-lg);
@@ -65,6 +73,11 @@ const Link = styled.a`
       width: 2.5rem;
       fill: var(--color-grey-700);
       transition: all 0.2s;
+
+      @media (max-width: 32em) {
+        height: 2rem;
+        width: 2rem;
+      }
 
       &:hover,
       &:active {
