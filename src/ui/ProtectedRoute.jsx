@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 import SpinnerFullPage from "./SpinnerFullPage";
+
 import { useUser } from "../features/authentication/useUser";
 
 function ProtectedRoute({ children }) {

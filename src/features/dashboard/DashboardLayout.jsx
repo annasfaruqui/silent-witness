@@ -1,11 +1,12 @@
 import styled from "styled-components";
-import Stats from "./Stats";
-import Spinner from "../../ui/Spinner";
 
 import TodayReports from "../reports/TodayReports";
 import ReportsChart from "./ReportsChart";
-import { useRecentReports } from "./useRecentReports";
 import ReportsGraph from "./ReportsGraph";
+import Stats from "./Stats";
+import Spinner from "../../ui/Spinner";
+
+import { useRecentReports } from "./useRecentReports";
 
 const StyledDashboardLayout = styled.section`
   display: grid;

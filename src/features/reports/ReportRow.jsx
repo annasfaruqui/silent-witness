@@ -12,15 +12,14 @@ import { GoUnlink } from "react-icons/go";
 import Table from "../../ui/Table";
 import Tag from "../../ui/Tag";
 import Modal from "../../ui/Modal";
-import ConfirmDelete from "../../ui/ConfirmDelete";
 import Menus from "../../ui/Menus";
+import ConfirmUpdateStatus from "../../ui/ConfirmUpdateStatus";
+import ConfirmDelete from "../../ui/ConfirmDelete";
 
 import { useUpdateReport } from "./useUpdateReport";
 import { useDeleteReport } from "./useDeleteReport";
-
 import { MAX_WORDS } from "../../utils/constants";
 import { collapseText, statusToTagColor } from "../../utils/helpers";
-import ConfirmUpdateStatus from "../../ui/ConfirmUpdateStatus";
 
 const ReportNumber = styled.p`
   font-size: var(--font-lg);

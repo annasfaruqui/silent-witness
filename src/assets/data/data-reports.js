@@ -12,7 +12,6 @@ function fromToday(numDays, withTime = false) {
 
 export const reports_data = [
   {
-    id: 1,
     created_at: fromToday(-5, true),
     reportDate: fromToday(-5),
     images: [imageUrl + "sample-img-1.jpg", imageUrl + "sample-img-2.jpg"],
@@ -32,7 +31,6 @@ export const reports_data = [
   },
 
   {
-    id: 2,
     created_at: fromToday(-4, true),
     reportDate: fromToday(-4),
     images: [imageUrl + "sample-img-3.jpg", imageUrl + "sample-img-4.jpg"],
@@ -51,7 +49,6 @@ export const reports_data = [
     status: "unsolved",
   },
   {
-    id: 3,
     created_at: fromToday(0, true),
     reportDate: fromToday(0),
     incidentDetails:
@@ -66,7 +63,6 @@ export const reports_data = [
     status: "unsolved",
   },
   {
-    id: 4,
     created_at: fromToday(-27, true),
     reportDate: fromToday(-27),
     images: [imageUrl + "sample-img-5.jpg"],
@@ -84,7 +80,6 @@ export const reports_data = [
     status: "probing",
   },
   {
-    id: 5,
     created_at: fromToday(0, true),
     reportDate: fromToday(0),
     images: [imageUrl + "sample-img-6.jpg"],
@@ -103,7 +98,6 @@ export const reports_data = [
     status: "unsolved",
   },
   {
-    id: 6,
     created_at: fromToday(-15, true),
     reportDate: fromToday(-15),
     images: [imageUrl + "sample-img-7.jpg"],
@@ -121,7 +115,6 @@ export const reports_data = [
     status: "solved",
   },
   {
-    id: 7,
     created_at: fromToday(-28, true),
     reportDate: fromToday(-28),
     incidentDetails:
@@ -137,7 +130,6 @@ export const reports_data = [
     status: "false",
   },
   {
-    id: 8,
     created_at: fromToday(-15, true),
     reportDate: fromToday(-15),
     incidentDetails:
@@ -152,7 +144,6 @@ export const reports_data = [
     status: "false",
   },
   {
-    id: 9,
     created_at: fromToday(-6, true),
     reportDate: fromToday(-6),
     images: [imageUrl + "sample-img-8.jpg"],
@@ -170,7 +161,6 @@ export const reports_data = [
     status: "solved",
   },
   {
-    id: 10,
     created_at: fromToday(-19, true),
     reportDate: fromToday(-19),
     images: [imageUrl + "sample-img-9.jpg"],
@@ -187,7 +177,6 @@ export const reports_data = [
     status: "unsolved",
   },
   {
-    id: 11,
     created_at: fromToday(-7, true),
     reportDate: fromToday(-7),
     images: [imageUrl + "sample-img-10.jpg"],
@@ -206,7 +195,6 @@ export const reports_data = [
     status: "unsolved",
   },
   {
-    id: 12,
     created_at: fromToday(-9, true),
     reportDate: fromToday(-9),
     incidentDetails:
@@ -221,7 +209,6 @@ export const reports_data = [
     status: "false",
   },
   {
-    id: 13,
     created_at: fromToday(-14, true),
     reportDate: fromToday(-14),
     images: [imageUrl + "sample-img-11.jpg"],
@@ -238,7 +225,6 @@ export const reports_data = [
     status: "probing",
   },
   {
-    id: 14,
     created_at: fromToday(-3, true),
     reportDate: fromToday(-3),
     images: [imageUrl + "sample-img-12.jpg"],
@@ -256,7 +242,6 @@ export const reports_data = [
     status: "unsolved",
   },
   {
-    id: 15,
     created_at: fromToday(-18, true),
     reportDate: fromToday(-18),
     images: [imageUrl + "sample-img-13.jpg"],
@@ -275,7 +260,6 @@ export const reports_data = [
     status: "probing",
   },
   {
-    id: 16,
     created_at: fromToday(-10, true),
     reportDate: fromToday(-10),
     images: [imageUrl + "sample-img-14.jpg"],
@@ -292,7 +276,6 @@ export const reports_data = [
     status: "unrelated",
   },
   {
-    id: 17,
     created_at: fromToday(-2, true),
     reportDate: fromToday(-2),
     images: [imageUrl + "sample-img-15.jpg", imageUrl + "sample-img-16.jpg"],
@@ -312,7 +295,6 @@ export const reports_data = [
     status: "unsolved",
   },
   {
-    id: 18,
     created_at: fromToday(-7, true),
     reportDate: fromToday(-7),
     images: [
@@ -335,7 +317,6 @@ export const reports_data = [
     status: "probing",
   },
   {
-    id: 19,
     created_at: fromToday(-13, true),
     reportDate: fromToday(-13),
     incidentDetails:
@@ -350,7 +331,6 @@ export const reports_data = [
     status: "false",
   },
   {
-    id: 20,
     created_at: fromToday(-6, true),
     reportDate: fromToday(-6),
     incidentDetails:
@@ -367,7 +347,6 @@ export const reports_data = [
     status: "false",
   },
   {
-    id: 21,
     created_at: fromToday(-4, true),
     reportDate: fromToday(-4),
     images: [imageUrl + "sample-img-20.jpg"],
@@ -384,7 +363,6 @@ export const reports_data = [
     status: "unsolved",
   },
   {
-    id: 22,
     created_at: fromToday(0, true),
     reportDate: fromToday(0),
     incidentDetails:
@@ -399,7 +377,6 @@ export const reports_data = [
     status: "unsolved",
   },
   {
-    id: 23,
     created_at: fromToday(-7, true),
     reportDate: fromToday(-7),
     incidentDetails:
@@ -414,7 +391,6 @@ export const reports_data = [
     status: "false",
   },
   {
-    id: 24,
     created_at: fromToday(-7, true),
     reportDate: fromToday(-7),
     images: [
@@ -435,7 +411,6 @@ export const reports_data = [
     status: "unrelated",
   },
   {
-    id: 25,
     created_at: fromToday(-16, true),
     reportDate: fromToday(-16),
     incidentDetails:
@@ -453,7 +428,6 @@ export const reports_data = [
   },
 
   {
-    id: 26,
     created_at: fromToday(0, true),
     reportDate: fromToday(0),
     incidentDetails:
@@ -469,7 +443,6 @@ export const reports_data = [
     status: "unsolved",
   },
   {
-    id: 27,
     created_at: fromToday(-8, true),
     reportDate: fromToday(-8),
     incidentDetails:
@@ -486,7 +459,6 @@ export const reports_data = [
     status: "solved",
   },
   {
-    id: 28,
     created_at: fromToday(-16, true),
     reportDate: fromToday(-16),
     incidentDetails:
@@ -501,7 +473,6 @@ export const reports_data = [
     status: "solved",
   },
   {
-    id: 29,
     created_at: fromToday(-26, true),
     reportDate: fromToday(-26),
     incidentDetails:
@@ -518,7 +489,6 @@ export const reports_data = [
     status: "probing",
   },
   {
-    id: 30,
     created_at: fromToday(-12, true),
     reportDate: fromToday(-12),
     incidentDetails:
@@ -536,7 +506,6 @@ export const reports_data = [
   },
 
   {
-    id: 31,
     created_at: fromToday(-1, true),
     reportDate: fromToday(-1),
     incidentDetails:
@@ -555,7 +524,6 @@ export const reports_data = [
     status: "unsolved",
   },
   {
-    id: 32,
     created_at: fromToday(-17, true),
     reportDate: fromToday(-17),
     incidentDetails:
@@ -572,7 +540,6 @@ export const reports_data = [
     status: "unsolved",
   },
   {
-    id: 33,
     created_at: fromToday(-24, true),
     reportDate: fromToday(-24),
     images: [imageUrl + "robert-lewandowski.jpg"],
@@ -588,7 +555,6 @@ export const reports_data = [
     status: "false",
   },
   {
-    id: 34,
     created_at: fromToday(0, true),
     reportDate: fromToday(0),
     incidentDetails:
@@ -604,7 +570,6 @@ export const reports_data = [
     status: "unsolved",
   },
   {
-    id: 35,
     created_at: fromToday(-17, true),
     reportDate: fromToday(-17),
     incidentDetails:
@@ -619,7 +584,6 @@ export const reports_data = [
     status: "unsolved",
   },
   {
-    id: 36,
     created_at: fromToday(-13, true),
     reportDate: fromToday(-13),
     incidentDetails:
@@ -637,7 +601,6 @@ export const reports_data = [
     status: "solved",
   },
   {
-    id: 37,
     created_at: fromToday(-27, true),
     reportDate: fromToday(-27),
     incidentDetails:
@@ -653,7 +616,6 @@ export const reports_data = [
     status: "probing",
   },
   {
-    id: 38,
     created_at: fromToday(-7, true),
     reportDate: fromToday(-7),
     incidentDetails:
@@ -671,7 +633,6 @@ export const reports_data = [
     status: "unsolved",
   },
   {
-    id: 39,
     created_at: fromToday(-8, true),
     reportDate: fromToday(-8),
     incidentDetails:
@@ -687,7 +648,6 @@ export const reports_data = [
     status: "solved",
   },
   {
-    id: 40,
     created_at: fromToday(-17, true),
     reportDate: fromToday(-17),
     incidentDetails:
@@ -703,7 +663,6 @@ export const reports_data = [
     status: "probing",
   },
   {
-    id: 41,
     created_at: fromToday(-18, true),
     reportDate: fromToday(-18),
     incidentDetails:
@@ -719,7 +678,6 @@ export const reports_data = [
     status: "probing",
   },
   {
-    id: 42,
     created_at: fromToday(-6, true),
     reportDate: fromToday(-6),
     incidentDetails:
@@ -736,7 +694,6 @@ export const reports_data = [
     status: "solved",
   },
   {
-    id: 43,
     created_at: fromToday(-16, true),
     reportDate: fromToday(-16),
     incidentDetails:
@@ -751,7 +708,6 @@ export const reports_data = [
     status: "probing",
   },
   {
-    id: 44,
     created_at: fromToday(-5, true),
     reportDate: fromToday(-5),
     incidentDetails:
@@ -766,7 +722,6 @@ export const reports_data = [
     status: "unsolved",
   },
   {
-    id: 45,
     created_at: fromToday(-9, true),
     reportDate: fromToday(-9),
     incidentDetails:

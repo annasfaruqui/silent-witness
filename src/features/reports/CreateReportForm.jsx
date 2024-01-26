@@ -46,11 +46,17 @@ function CreateReportForm() {
       images,
     };
 
+    console.log("incidentDate: ", cleanedData.incidentDate);
+    console.log("reportDate: ", cleanedData.reportDate);
+
     createReport({ ...cleanedData, images }, { onSuccess: reset() });
   }
 
   function onError(errors) {
     console.log("Errors are: ", errors);
+
+    // console.log("incidentDate: ", incidentDate);
+    // console.log("reportDate: ", cleanedData.reportDate);
   }
 
   return (
@@ -83,7 +89,8 @@ function CreateReportForm() {
       >
         <FormRow label="Date of incident" error={errors?.incidentDate?.message}>
           <Input
-            type="date"
+            // type="date"
+            type="datetime-local"
             id="incidentDate"
             disabled={isCreating}
             {...register("incidentDate", {

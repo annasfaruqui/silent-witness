@@ -1,10 +1,11 @@
 import { useState } from "react";
-import supabase from "../services/supabase";
-
-import { reports_data as reports } from "./data/data-reports";
-import Button from "../ui/Button";
 import styled from "styled-components";
 import toast from "react-hot-toast";
+
+import Button from "../ui/Button";
+
+import supabase from "../services/supabase";
+import { reports_data as reports } from "./data/data-reports";
 
 async function deleteReports() {
   const { error } = await supabase.from("reports").delete().gt("id", 0);

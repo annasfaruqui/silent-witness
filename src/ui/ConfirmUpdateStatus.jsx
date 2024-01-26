@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 import Button from "./Button";
 import Heading from "./Heading";
+
 import { capitalizeFirstLetter } from "../utils/capitalizer";
 
 const StyledConfirmUpdate = styled.div`

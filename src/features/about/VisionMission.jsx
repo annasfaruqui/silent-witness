@@ -1,10 +1,10 @@
 import styled, { css } from "styled-components";
 import HeadingGroup from "../../ui/HeadingGroup";
 
+import Introduction from "../../ui/Introduction";
+
 import { statements_data as statementsData } from "../../assets/data/data-statements";
 import { values_data as valuesData } from "../../assets/data/data-our-values";
-
-import Introduction from "../../ui/Introduction";
 
 const Grid = styled.div`
   display: grid;
@@ -65,7 +65,7 @@ const StyledStatement = styled.div`
     `}
 
   ${(props) =>
-    props.icon === "false" &&
+    props.$icon === "false" &&
     css`
       grid-template-rows: repeat(2, auto);
       align-items: start;
@@ -73,7 +73,7 @@ const StyledStatement = styled.div`
 
       & h5 {
         align-self: start;
-        font-size: 2.3rem;
+        font-size: 2rem;
         color: var(--color-grey-600);
       }
 

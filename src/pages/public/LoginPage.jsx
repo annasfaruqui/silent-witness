@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
-import bgImg from "../../assets/images/login-page/bg-image.jpg";
 import LoginLayout from "../../features/authentication/LoginLayout";
+
+import bgImg from "../../assets/images/login-page/bg-image.jpg";
 
 const StyledLoginPage = styled.div`
   height: 100vh;

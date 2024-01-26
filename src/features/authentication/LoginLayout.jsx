@@ -1,8 +1,9 @@
+import { useNavigate } from "react-router";
 import styled from "styled-components";
+
 import LoginForm from "./LoginForm";
 import Logo from "../../ui/Logo";
 import Button from "../../ui/Button";
-import { useNavigate } from "react-router";
 
 const Box = styled.div`
   height: 100%;

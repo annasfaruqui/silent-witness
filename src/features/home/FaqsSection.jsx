@@ -1,12 +1,11 @@
-import styled from "styled-components";
+import { useState } from "react";
+import styled, { css } from "styled-components";
 import { FaPlus, FaMinus } from "react-icons/fa6";
-import styles from "./FaqsSection.module.css";
 
 import Container from "../../ui/Container";
 import HeadingGroup from "../../ui/HeadingGroup";
 
 import { faqs_data as faqsData } from "../../assets/data/data-faqs";
-import { useState } from "react";
 
 const StyledAccordion = styled.div`
   margin-top: 4rem;
@@ -21,6 +20,17 @@ const StyledAccordionItem = styled.div`
   border-radius: var(--border-radius-lg);
 
   cursor: pointer;
+
+  ${(props) =>
+    props.$open === "true" &&
+    css`
+      border-top: 4px solid var(--color-brand-600);
+      transition: all 0.1s;
+
+      h5 {
+        color: var(--color-brand-700) !important;
+      }
+    `}
 `;
 
 const Question = styled.div`
@@ -144,7 +154,7 @@ function AccordionItem({ num, curOpen, onOpen, question, children }) {
 
   return (
     <StyledAccordionItem
-      className={isOpen ? styles.open : ""}
+      $open={isOpen ? "true" : "false"}
       onClick={handleToggle}
     >
       <Question>

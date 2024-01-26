@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { format } from "date-fns";
 
 import ButtonLink from "../../ui/ButtonLink";
+
 import { collapseText } from "../../utils/helpers";
 import { MIN_WORDS } from "../../utils/constants";
 

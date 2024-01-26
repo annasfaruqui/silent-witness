@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router";
 
 import Button from "../../ui/Button";
 import Form from "../../ui/Form";
@@ -8,10 +9,9 @@ import SpinnerMini from "../../ui/SpinnerMini";
 import ButtonGroup from "../../ui/ButtonGroup";
 
 import { useLogin } from "./useLogin";
-import { useNavigate } from "react-router";
 
 function LoginForm() {
-  const [email, setEmail] = useState("fake@email.com");
+  const [email, setEmail] = useState("demo@silentwitness.com");
   const [password, setPassword] = useState("12345678");
   const { login, isLoggingIn } = useLogin();
   const navigate = useNavigate();

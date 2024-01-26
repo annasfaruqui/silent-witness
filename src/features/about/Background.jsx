@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 import HeadingGroup from "../../ui/HeadingGroup";
 import Introduction from "../../ui/Introduction";
 import Heading from "../../ui/Heading";

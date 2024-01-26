@@ -8,9 +8,10 @@ import {
 import { LuLayoutDashboard } from "react-icons/lu";
 import { IoFileTrayFullOutline } from "react-icons/io5";
 
-import { useLogout } from "../features/authentication/useLogout";
 import Modal from "./Modal";
 import ConfirmLogout from "./ConfirmLogout";
+
+import { useLogout } from "../features/authentication/useLogout";
 
 const NavList = styled.ul`
   display: flex;

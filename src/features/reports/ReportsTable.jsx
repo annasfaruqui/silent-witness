@@ -1,12 +1,13 @@
+import styled from "styled-components";
+
 import Table from "../../ui/Table";
 import Spinner from "../../ui/Spinner";
 import Empty from "../../ui/Empty";
 import ReportRow from "./ReportRow";
-
-import { useReports } from "./useReports";
-import styled from "styled-components";
 import Menus from "../../ui/Menus";
 import Pagination from "../../ui/Pagination";
+
+import { useReports } from "./useReports";
 
 const CenterDiv = styled.div`
   text-align: center;

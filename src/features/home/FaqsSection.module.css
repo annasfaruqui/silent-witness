@@ -1,9 +1,0 @@
-.open {
-  border-top: 4px solid var(--color-brand-600);
-
-  transition: all 0.1s;
-}
-
-.open h5 {
-  color: var(--color-brand-700) !important;
-}

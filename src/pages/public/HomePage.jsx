@@ -1,4 +1,5 @@
 import HomeLayout from "../../features/home/HomeLayout";
+
 import { useScrollToTop } from "../../hooks/useScrollToTop";
 
 function HomePage() {

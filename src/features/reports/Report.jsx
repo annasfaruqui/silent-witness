@@ -11,14 +11,14 @@ import ButtonGroup from "../../ui/ButtonGroup";
 import ButtonWithArrow from "../../ui/ButtonWithArrow";
 import Button from "../../ui/Button";
 import Modal from "../../ui/Modal";
+import ConfirmUpdateStatus from "../../ui/ConfirmUpdateStatus";
 import ConfirmDelete from "../../ui/ConfirmDelete";
 
-import { statusToTagColor } from "../../utils/helpers";
 import { useMoveBack } from "../../hooks/useMoveBack";
 import { useReport } from "./useReport";
 import { useDeleteReport } from "./useDeleteReport";
 import { useUpdateReport } from "./useUpdateReport";
-import ConfirmUpdateStatus from "../../ui/ConfirmUpdateStatus";
+import { statusToTagColor } from "../../utils/helpers";
 
 const HeadingBox = styled.div`
   display: flex;

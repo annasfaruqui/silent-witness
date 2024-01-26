@@ -2,6 +2,7 @@ import { styled } from "styled-components";
 
 import SidebarNav from "./SidebarNav";
 import Logo from "./Logo";
+
 import Uploader from "../assets/Uploader";
 
 const StyledSidebar = styled.aside`

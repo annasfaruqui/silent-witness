@@ -3,6 +3,7 @@ import { format } from "date-fns";
 import { PiNotePencilDuotone } from "react-icons/pi";
 
 import Tag from "../../ui/Tag";
+
 import { statusToTagColor, subtractDates } from "../../utils/helpers";
 
 const DetailsBox = styled.section`
