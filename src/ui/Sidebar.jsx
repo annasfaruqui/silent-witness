@@ -3,8 +3,6 @@ import { styled } from "styled-components";
 import SidebarNav from "./SidebarNav";
 import Logo from "./Logo";
 
-import Uploader from "../assets/Uploader";
-
 const StyledSidebar = styled.aside`
   background-color: var(--color-grey-0);
   padding: 5rem 2.4rem 3rem;
@@ -22,8 +20,6 @@ function Sidebar() {
     <StyledSidebar>
       <Logo />
       <SidebarNav />
-
-      <Uploader />
     </StyledSidebar>
   );
 }
